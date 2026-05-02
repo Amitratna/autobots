@@ -1,0 +1,535 @@
+    41|HTML = r"""<!DOCTYPE html>
+    42|<html lang="en">
+    43|<head>
+    44|<meta charset="UTF-8">
+    45|<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    46|<title>AI Agent Academy</title>
+    47|<style>
+    48|  :root {
+    49|    --bg: #0d1117;
+    50|    --bg2: #161b22;
+    51|    --bg3: #21262d;
+    52|    --border: #30363d;
+    53|    --text: #e6edf3;
+    54|    --text2: #8b949e;
+    55|    --accent: #58a6ff;
+    56|    --green: #3fb950;
+    57|    --yellow: #d29922;
+    58|    --red: #f85149;
+    59|    --purple: #bc8cff;
+    60|    --orange: #d4760b;
+    61|  }
+    62|  * { margin: 0; padding: 0; box-sizing: border-box; }
+    63|  body {
+    64|    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    65|    background: var(--bg);
+    66|    color: var(--text);
+    67|    display: flex;
+    68|    min-height: 100vh;
+    69|  }
+    70|
+    71|  /* Sidebar */
+    72|  .sidebar {
+    73|    width: 280px;
+    74|    background: var(--bg2);
+    75|    border-right: 1px solid var(--border);
+    76|    padding: 20px;
+    77|    overflow-y: auto;
+    78|    flex-shrink: 0;
+    79|  }
+    80|  .sidebar h1 {
+    81|    font-size: 18px;
+    82|    margin-bottom: 8px;
+    83|    color: var(--accent);
+    84|  }
+    85|  .sidebar .subtitle {
+    86|    font-size: 12px;
+    87|    color: var(--text2);
+    88|    margin-bottom: 20px;
+    89|  }
+    90|  .progress-bar-wrap {
+    91|    background: var(--bg3);
+    92|    height: 8px;
+    93|    border-radius: 4px;
+    94|    margin-bottom: 20px;
+    95|    overflow: hidden;
+    96|  }
+    97|  .progress-bar-fill {
+    98|    height: 100%;
+    99|    background: linear-gradient(90deg, var(--green), var(--accent));
+   100|    transition: width 0.5s;
+   101|    border-radius: 4px;
+   102|  }
+   103|  .progress-label {
+   104|    font-size: 12px;
+   105|    color: var(--text2);
+   106|    text-align: right;
+   107|    margin-bottom: 16px;
+   108|  }
+   109|  .sidebar-nav { list-style: none; }
+   110|  .sidebar-nav li {
+   111|    padding: 10px 12px;
+   112|    margin: 2px -12px;
+   113|    border-radius: 6px;
+   114|    cursor: pointer;
+   115|    transition: all 0.15s;
+   116|    font-size: 14px;
+   117|    display: flex;
+   118|    align-items: center;
+   119|    gap: 8px;
+   120|  }
+   121|  .sidebar-nav li:hover { background: var(--bg3); }
+   122|  .sidebar-nav li.active { background: var(--bg3); border-left: 3px solid var(--accent); }
+   123|  .sidebar-nav li .status-icon { font-size: 12px; }
+   124|  .sidebar-nav li .lesson-num {
+   125|    background: var(--bg3);
+   126|    color: var(--text2);
+   127|    font-size: 11px;
+   128|    padding: 1px 6px;
+   129|    border-radius: 10px;
+   130|    margin-left: auto;
+   131|  }
+   132|
+   133|  /* Main content */
+   134|  .main {
+   135|    flex: 1;
+   136|    padding: 30px 40px;
+   137|    overflow-y: auto;
+   138|  }
+   139|  .tab-bar {
+   140|    display: flex;
+   141|    gap: 0;
+   142|    border-bottom: 1px solid var(--border);
+   143|    margin-bottom: 24px;
+   144|  }
+   145|  .tab-bar button {
+   146|    background: none;
+   147|    border: none;
+   148|    color: var(--text2);
+   149|    padding: 10px 20px;
+   150|    cursor: pointer;
+   151|    font-size: 14px;
+   152|    border-bottom: 2px solid transparent;
+   153|    transition: all 0.15s;
+   154|  }
+   155|  .tab-bar button:hover { color: var(--text); }
+   156|  .tab-bar button.active {
+   157|    color: var(--accent);
+   158|    border-bottom-color: var(--accent);
+   159|  }
+   160|  .tab-content { display: none; }
+   161|  .tab-content.active { display: block; }
+   162|
+   163|  /* Lesson content */
+   164|  .lesson-title { font-size: 24px; margin-bottom: 8px; }
+   165|  .lesson-summary { color: var(--text2); margin-bottom: 20px; font-size: 15px; }
+   166|  .lesson-content {
+   167|    line-height: 1.7;
+   168|    font-size: 15px;
+   169|  }
+   170|  .lesson-content h1 { font-size: 22px; margin: 24px 0 12px; color: var(--accent); }
+   171|  .lesson-content h2 { font-size: 18px; margin: 20px 0 10px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+   172|  .lesson-content h3 { font-size: 16px; margin: 16px 0 8px; }
+   173|  .lesson-content p { margin: 10px 0; }
+   174|  .lesson-content code {
+   175|    background: var(--bg3);
+   176|    padding: 2px 6px;
+   177|    border-radius: 4px;
+   178|    font-size: 13px;
+   179|  }
+   180|  .lesson-content pre {
+   181|    background: var(--bg3);
+   182|    padding: 16px;
+   183|    border-radius: 8px;
+   184|    overflow-x: auto;
+   185|    margin: 12px 0;
+   186|    border: 1px solid var(--border);
+   187|  }
+   188|  .lesson-content table {
+   189|    border-collapse: collapse;
+   190|    width: 100%;
+   191|    margin: 12px 0;
+   192|  }
+   193|  .lesson-content th, .lesson-content td {
+   194|    border: 1px solid var(--border);
+   195|    padding: 8px 12px;
+   196|    text-align: left;
+   197|  }
+   198|  .lesson-content th { background: var(--bg3); }
+   199|
+   200|  /* Quiz */
+   201|  .quiz-area { margin-top: 24px; }
+   202|  .quiz-question {
+   203|    background: var(--bg2);
+   204|    border: 1px solid var(--border);
+   205|    border-radius: 8px;
+   206|    padding: 20px;
+   207|    margin-bottom: 16px;
+   208|  }
+   209|  .quiz-question .q-text { font-size: 16px; margin-bottom: 12px; }
+   210|  .quiz-option {
+   211|    display: block;
+   212|    width: 100%;
+   213|    text-align: left;
+   214|    background: var(--bg3);
+   215|    border: 1px solid var(--border);
+   216|    color: var(--text);
+   217|    padding: 10px 14px;
+   218|    border-radius: 6px;
+   219|    margin: 4px 0;
+   220|    cursor: pointer;
+   221|    transition: all 0.15s;
+   222|    font-size: 14px;
+   223|  }
+   224|  .quiz-option:hover { background: var(--border); }
+   225|  .quiz-option.correct { background: #1a3a1a; border-color: var(--green); }
+   226|  .quiz-option.wrong { background: #3a1a1a; border-color: var(--red); }
+   227|  .quiz-option.selected { border-color: var(--accent); }
+   228|  .quiz-option:disabled { cursor: default; }
+   229|
+   230|  /* Playground */
+   231|  .playground-container {
+   232|    background: var(--bg2);
+   233|    border: 1px solid var(--border);
+   234|    border-radius: 8px;
+   235|    padding: 20px;
+   236|  }
+   237|  .playground-input {
+   238|    width: 100%;
+   239|    background: var(--bg3);
+   240|    border: 1px solid var(--border);
+   241|    color: var(--text);
+   242|    padding: 12px;
+   243|    border-radius: 6px;
+   244|    font-size: 14px;
+   245|    margin-bottom: 12px;
+   246|    resize: vertical;
+   247|    min-height: 80px;
+   248|  }
+   249|  .playground-btn {
+   250|    background: var(--accent);
+   251|    border: none;
+   252|    color: #fff;
+   253|    padding: 8px 20px;
+   254|    border-radius: 6px;
+   255|    cursor: pointer;
+   256|    font-size: 14px;
+   257|    transition: opacity 0.15s;
+   258|  }
+   259|  .playground-btn:hover { opacity: 0.85; }
+   260|  .playground-btn:disabled { opacity: 0.5; cursor: default; }
+   261|  .agent-thought {
+   262|    background: #0d1a2e;
+   263|    border: 1px solid var(--border);
+   264|    border-radius: 8px;
+   265|    padding: 16px;
+   266|    margin-top: 16px;
+   267|    font-family: monospace;
+   268|    font-size: 13px;
+   269|    line-height: 1.5;
+   270|    white-space: pre-wrap;
+   271|  }
+   272|  .thought-step { color: var(--accent); font-weight: bold; }
+   273|  .thought-action { color: var(--yellow); }
+   274|  .thought-result { color: var(--green); }
+   275|  .thought-error { color: var(--red); }
+   276|
+   277|  @media (max-width: 768px) {
+   278|    body { flex-direction: column; }
+   279|    .sidebar { width: 100%; border-right: none; border-bottom: 1px solid var(--border); }
+   280|    .main { padding: 16px; }
+   281|  }
+   282|</style>
+   283|</head>
+   284|<body>
+   285|<div class="sidebar" id="sidebar">
+   286|  <h1>🤖 AI Agent Academy</h1>
+   287|  <div class="subtitle">Learn AI Agents interactively</div>
+   288|  <div class="progress-bar-wrap">
+   289|    <div class="progress-bar-fill" id="progressBar" style="width:0%"></div>
+   290|  </div>
+   291|  <div class="progress-label" id="progressLabel">0% complete</div>
+   292|  <ul class="sidebar-nav" id="lessonList"></ul>
+   293|</div>
+   294|<div class="main">
+   295|  <div class="tab-bar">
+   296|    <button class="active" data-tab="lessons">📚 Lessons</button>
+   297|    <button data-tab="playground">🧪 Agent Playground</button>
+   298|  </div>
+   299|
+   300|  <!-- Lessons tab -->
+   301|  <div class="tab-content active" id="tab-lessons">
+   302|    <div id="lessonContent">
+   303|      <p style="color:var(--text2);font-size:16px">Select a lesson from the sidebar to begin.</p>
+   304|    </div>
+   305|  </div>
+   306|
+   307|  <!-- Playground tab -->
+   308|  <div class="tab-content" id="tab-playground">
+   309|    <div class="playground-container">
+   310|      <h2 style="margin-bottom:12px;font-size:18px">🧪 Agent Playground</h2>
+   311|      <p style="color:var(--text2);margin-bottom:16px;font-size:14px">
+   312|        See how an AI agent thinks. Type a prompt and watch the simulated agent
+   313|        go through its reasoning → action → result loop.
+   314|      </p>
+   315|      <textarea class="playground-input" id="playgroundPrompt" placeholder="Enter a prompt for the agent... e.g. 'What's the weather in Tokyo?' or 'Find me the latest AI news'">What's the best way to learn about AI agents?</textarea>
+   316|      <div>
+   317|        <button class="playground-btn" id="runAgentBtn" onclick="runAgent()">▶ Run Agent</button>
+   318|        <span id="agentStatus" style="margin-left:12px;color:var(--text2);font-size:13px"></span>
+   319|      </div>
+   320|      <div class="agent-thought" id="agentOutput" style="display:none"></div>
+   321|    </div>
+   322|  </div>
+   323|</div>
+   324|
+   325|<script>
+   326|// ─── Data ────────────────────────────────────────────────────────────
+   327|let lessons = [];
+   328|let progress = {};
+   329|const LESSONS_API = '/api/lessons';
+   330|const PROGRESS_API = '/api/progress';
+   331|const SIMULATE_API = '/api/agent/simulate';
+   332|
+   333|async function loadData() {
+   334|  try {
+   335|    const [lRes, pRes] = await Promise.all([
+   336|      fetch(LESSONS_API),
+   337|      fetch(PROGRESS_API)
+   338|    ]);
+   339|    lessons = await lRes.json();
+   340|    progress = await pRes.json();
+   341|  } catch(e) {
+   342|    console.error('Failed to load data', e);
+   343|  }
+   344|  render();
+   345|}
+   346|
+   347|// ─── Render ──────────────────────────────────────────────────────────
+   348|function render() {
+   349|  renderSidebar();
+   350|  updateProgress();
+   351|  selectLesson(lessons[0]?.id || 1);
+   352|}
+   353|
+   354|function renderSidebar() {
+   355|  const list = document.getElementById('lessonList');
+   356|  list.innerHTML = '';
+   357|  lessons.forEach(l => {
+   358|    const prog = progress[l.id] || {};
+   359|    const icon = prog.completed ? '✅' : '⬜';
+   360|    const li = document.createElement('li');
+   361|    li.innerHTML = `<span>${icon}</span> ${l.title} <span class="lesson-num">${l.id}</span>`;
+   362|    li.onclick = () => selectLesson(l.id);
+   363|    li.dataset.id = l.id;
+   364|    list.appendChild(li);
+   365|  });
+   366|}
+   367|
+   368|function updateProgress() {
+   369|  const completed = lessons.filter(l => (progress[l.id] || {}).completed).length;
+   370|  const total = lessons.length || 1;
+   371|  const pct = Math.round(completed / total * 100);
+   372|  document.getElementById('progressBar').style.width = pct + '%';
+   373|  document.getElementById('progressLabel').textContent = pct + '% complete';
+   374|}
+   375|
+   376|// ─── Lesson Selection ────────────────────────────────────────────────
+   377|function selectLesson(id) {
+   378|  // Highlight nav
+   379|  document.querySelectorAll('.sidebar-nav li').forEach(li => {
+   380|    li.classList.toggle('active', parseInt(li.dataset.id) === id);
+   381|  });
+   382|
+   383|  const lesson = lessons.find(l => l.id === id);
+   384|  if (!lesson) return;
+   385|
+   386|  const prog = progress[id] || {};
+   387|  const markdown = renderMarkdown(lesson.content);
+   388|
+   389|  document.getElementById('lessonContent').innerHTML = `
+   390|    <h1 class="lesson-title">${lesson.title}</h1>
+   391|    <p class="lesson-summary">${lesson.summary} ${prog.completed ? '✅ Completed' : ''}</p>
+   392|    <div class="lesson-content">${markdown}</div>
+   393|    <div class="quiz-area">
+   394|      <h2 style="margin:24px 0 12px;font-size:18px">📝 Quiz</h2>
+   395|      <div id="quizContainer"></div>
+   396|    </div>
+   397|  `;
+   398|
+   399|  renderQuiz(lesson);
+   400|}
+   401|
+   402|// ─── Simple Markdown Renderer ────────────────────────────────────────
+   403|function renderMarkdown(md) {
+   404|  if (!md) return '';
+   405|  let html = md
+   406|    .replace(/&/g, '&amp;')
+   407|    .replace(/</g, '&lt;')
+   408|    .replace(/>/g, '&gt;')
+   409|    // Code blocks
+   410|    .replace(/```(\w*)\n([\s\S]*?)```/g, '<pre><code>$2</code></pre>')
+   411|    // Inline code
+   412|    .replace(/`([^`]+)`/g, '<code>$1</code>')
+   413|    // Headers
+   414|    .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+   415|    .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+   416|    .replace(/^# (.+)$/gm, '<h1>$1</h1>')
+   417|    // Bold
+   418|    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+   419|    // Tables
+   420|    .replace(/\|(.+)\|/g, function(m, content) {
+   421|      if (content.match(/[-]+/)) return '';
+   422|      const cells = content.split('|').map(c => c.trim()).filter(c => c);
+   423|      if (cells.length === 0) return '';
+   424|      return '<tr>' + cells.map(c => c.startsWith('-') ? '' : `<td>${c}</td>`).join('') + '</tr>';
+   425|    })
+   426|    .replace(/(<tr>.*<\/tr>)+/g, function(m) {
+   427|      if (m.includes('<td>')) return '<table>' + m + '</table>';
+   428|      return m;
+   429|    })
+   430|    // Bold in tables
+   431|    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+   432|    // Horizontal rules
+   433|    .replace(/^---+$/gm, '<hr>')
+   434|    // Line breaks
+   435|    .replace(/\n\n/g, '</p><p>')
+   436|    .replace(/\n/g, '<br>');
+   437|
+   438|  return '<p>' + html + '</p>';
+   439|}
+   440|
+   441|// ─── Quiz ────────────────────────────────────────────────────────────
+   442|function renderQuiz(lesson) {
+   443|  const qs = lesson.quiz_questions || [];
+   444|  if (!qs.length) {
+   445|    document.getElementById('quizContainer').innerHTML = '<p style="color:var(--text2)">No quiz for this lesson.</p>';
+   446|    return;
+   447|  }
+   448|  let html = '';
+   449|  qs.forEach((q, i) => {
+   450|    html += `<div class="quiz-question" data-idx="${i}">
+   451|      <div class="q-text">${i+1}. ${q.question}</div>
+   452|      <div class="quiz-options">`;
+   453|    q.options.forEach((opt, j) => {
+   454|      html += `<button class="quiz-option" onclick="answerQuiz(${lesson.id}, ${i}, ${j}, ${q.correct}, this)">${j+1}. ${opt}</button>`;
+   455|    });
+   456|    html += '</div></div>';
+   457|  });
+   458|  html += `<button onclick="resetQuiz(${lesson.id})" style="background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:8px 16px;border-radius:6px;cursor:pointer;font-size:13px">🔄 Reset quiz</button>`;
+   459|  document.getElementById('quizContainer').innerHTML = html;
+   460|}
+   461|
+   462|let quizAnswered = {};
+   463|
+   464|function answerQuiz(lessonId, qIdx, chosen, correct, btn) {
+   465|  const container = btn.closest('.quiz-options');
+   466|  const btns = container.querySelectorAll('.quiz-option');
+   467|  btns.forEach((b, i) => {
+   468|    b.disabled = true;
+   469|    b.classList.toggle('correct', i === correct);
+   470|    b.classList.toggle('wrong', i === chosen && i !== correct);
+   471|  });
+   472|  quizAnswered[lessonId + '-' + qIdx] = chosen;
+   473|
+   474|  // Save progress
+   475|  const lesson = lessons.find(l => l.id === lessonId);
+   476|  const total = lesson.quiz_questions.length;
+   477|  const answered = lesson.quiz_questions.filter((q, i) => quizAnswered[lessonId + '-' + i] !== undefined).length;
+   478|  const correct_count = lesson.quiz_questions.filter((q, i) => quizAnswered[lessonId + '-' + i] === q.correct).length;
+   479|
+   480|  fetch(SIMULATE_API, {
+   481|    method: 'POST',
+   482|    headers: {'Content-Type': 'application/json'},
+   483|    body: JSON.stringify({ lessonId, score: correct_count, total })
+   484|  }).then(() => {
+   485|    // Refresh progress
+   486|    return fetch(PROGRESS_API);
+   487|  }).then(r => r.json()).then(p => {
+   488|    progress = p;
+   489|    // Check if all answered
+   490|    if (answered === total) {
+   491|      fetch('/api/progress', {
+   492|        method: 'POST',
+   493|        headers: {'Content-Type': 'application/json'},
+   494|        body: JSON.stringify({ lessonId, score: correct_count, total, completed: correct_count === total })
+   495|      });
+   496|    }
+   497|    renderSidebar();
+   498|    updateProgress();
+   499|  });
+   500|}
+   501|
+   502|function resetQuiz(lessonId) {
+   503|  lessonId = parseInt(lessonId);
+   504|  const lesson = lessons.find(l => l.id === lessonId);
+   505|  if (!lesson) return;
+   506|  lesson.quiz_questions.forEach((q, i) => {
+   507|    delete quizAnswered[lessonId + '-' + i];
+   508|  });
+   509|  renderQuiz(lesson);
+   510|}
+   511|
+   512|// ─── Tabs ────────────────────────────────────────────────────────────
+   513|document.querySelectorAll('.tab-bar button').forEach(btn => {
+   514|  btn.addEventListener('click', () => {
+   515|    document.querySelectorAll('.tab-bar button').forEach(b => b.classList.remove('active'));
+   516|    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+   517|    btn.classList.add('active');
+   518|    document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+   519|  });
+   520|});
+   521|
+   522|// ─── Playground ──────────────────────────────────────────────────────
+   523|async function runAgent() {
+   524|  const prompt = document.getElementById('playgroundPrompt').value.trim();
+   525|  if (!prompt) return;
+   526|
+   527|  const btn = document.getElementById('runAgentBtn');
+   528|  const output = document.getElementById('agentOutput');
+   529|  const status = document.getElementById('agentStatus');
+   530|
+   531|  btn.disabled = true;
+   532|  status.textContent = 'Agent thinking...';
+   533|  output.style.display = 'block';
+   534|  output.innerHTML = `<span class="thought-step">🧠 Agent activated</span>\n`;
+   535|
+   536|  try {
+   537|    const res = await fetch(SIMULATE_API, {
+   538|      method: 'POST',
+   539|      headers: {'Content-Type': 'application/json'},
+   540|      body: JSON.stringify({ prompt })
+   541|    });
+   542|    const data = await res.json();
+   543|    output.innerHTML = formatAgentThought(data);
+   544|    status.textContent = '✅ Complete';
+   545|  } catch(e) {
+   546|    output.innerHTML += `<span class="thought-error">❌ Error: ${e.message}</span>`;
+   547|    status.textContent = '❌ Failed';
+   548|  }
+   549|  btn.disabled = false;
+   550|}
+   551|
+   552|function formatAgentThought(data) {
+   553|  let html = '';
+   554|  const steps = data.steps || [];
+   555|  steps.forEach(s => {
+   556|    if (s.type === 'perception') {
+   557|      html += `\n<span class="thought-step">👁 PERCEPTION</span>\n${s.content}\n`;
+   558|    } else if (s.type === 'reasoning') {
+   559|      html += `\n<span class="thought-step">🧠 REASONING</span>\n${s.content}\n`;
+   560|    } else if (s.type === 'action') {
+   561|      html += `\n<span class="thought-action">⚡ ACTION: ${s.tool || 'think'}</span>\n${s.content}\n`;
+   562|    } else if (s.type === 'result') {
+   563|      html += `\n<span class="thought-result">📌 RESULT</span>\n${s.content}\n`;
+   564|    }
+   565|  });
+   566|  html += `\n<span class="thought-step">✅ FINAL ANSWER</span>\n${data.answer || ''}`;
+   567|  return html;
+   568|}
+   569|
+   570|// ─── Init ────────────────────────────────────────────────────────────
+   571|loadData();
+   572|</script>
+   573|</body>
+   574|</html>"""
+   575|
