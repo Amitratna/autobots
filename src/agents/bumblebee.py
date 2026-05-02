@@ -1,7 +1,7 @@
 """Bumblebee — Research Agent.
 
-Analyses market trends, competitor listings, pricing, and keyword
-opportunities for digital illustration brushes on Etsy and Gumroad.
+Gathers market intelligence, competitive data, trends, and domain-specific
+research to inform downstream agents.
 """
 
 from typing import Any, Dict
@@ -9,54 +9,45 @@ from src.agents import BaseAgent
 
 
 class Bumblebee(BaseAgent):
-    """Market researcher — what's trending, what sells, what's missing."""
+    """Researcher — gathers and synthesises market / domain intelligence."""
 
     def __init__(self, config: Dict[str, Any] | None = None):
         super().__init__(name="Bumblebee", config=config)
         self.insights: Dict[str, Any] = {}
 
     def execute(self) -> Dict[str, Any]:
-        """Analyse the market and return research findings."""
-        niche = self.config.get("niche", "digital illustration brushes")
-        platform = self.config.get("platform", "etsy")
+        """Analyse the domain and return research findings."""
+        topic = self.config.get("topic", "current market")
+        sources = self.config.get("sources", ["web", "trends"])
 
         self.insights = {
-            "niche": niche,
-            "platform": platform,
-            "trending_styles": self._analyse_trends(),
-            "price_points": self._check_pricing(),
-            "keywords": self._extract_keywords(),
-            "competitors": self._scan_competitors(),
+            "topic": topic,
+            "sources": sources,
+            "trends": self._analyse_trends(),
+            "competitors": self._analyse_competition(),
+            "opportunities": self._identify_gaps(),
+            "raw_data": self.collected_data(),
         }
         return self.insights
 
     def _analyse_trends(self) -> list:
-        """Identify trending brush styles and aesthetics."""
-        # Phase 1 stub — replace with live API / scraping
+        """Identify current trends and patterns."""
         return [
-            "watercolour texture brushes",
-            "procreate lettering brushes",
-            "halftone pattern brushes",
+            "Trend analysis pending — hook to search API",
+            "Competitor movement detected",
         ]
 
-    def _check_pricing(self) -> dict:
-        """Determine competitive price ranges."""
+    def _analyse_competition(self) -> dict:
+        """Analyse competitive landscape."""
         return {
-            "single_brush": "$1.99 – $3.99",
-            "brush_pack_10": "$8.99 – $14.99",
-            "mega_pack_50+": "$19.99 – $39.99",
+            "top_players": self.config.get("competitors", ["Unknown"]),
+            "market_position": "emerging",
         }
 
-    def _extract_keywords(self) -> list:
-        """Extract high-traffic listing keywords."""
-        return [
-            "procreate brushes", "digital art brush set",
-            "texture brushes procreate", "brush stamp pack",
-        ]
+    def _identify_gaps(self) -> list:
+        """Identify unmet opportunities."""
+        return ["Underserved niche identified", "Price gap opportunity"]
 
-    def _scan_competitors(self) -> list:
-        """Identify top competitors and their strategies."""
-        return [
-            {"shop": "ExampleBrushCo", "products": 120, "avg_rating": 4.8},
-            {"shop": "ArtSupplyShop", "products": 89, "avg_rating": 4.5},
-        ]
+    def collected_data(self) -> dict:
+        """Return any raw research data collected."""
+        return {"status": "stub", "message": "Connect data sources in Phase 2"}

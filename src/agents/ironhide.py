@@ -1,7 +1,8 @@
 """Ironhide — Designer Agent.
 
-Generates digital brush designs using AI image generation APIs based
-on research data from Bumblebee.
+Translates research into concrete designs, specs, wireframes, or
+prototypes. Works with any deliverable type — UI mockups, architecture
+diagrams, data models, content outlines.
 """
 
 from typing import Any, Dict
@@ -9,37 +10,46 @@ from src.agents import BaseAgent
 
 
 class Ironhide(BaseAgent):
-    """Digital brush designer — turns research into artwork."""
+    """Designer — turns research into concrete designs and specs."""
 
     def __init__(self, config: Dict[str, Any] | None = None):
         super().__init__(name="Ironhide", config=config)
         self.designs: list = []
 
     def execute(self) -> Dict[str, Any]:
-        """Generate brush designs and return design specs."""
+        """Produce design specifications based on research data."""
         research = self.config.get("research", {})
-        style = research.get("trending_styles", ["abstract"])[0]
-        count = self.config.get("brush_count", 10)
+        deliverable_type = self.config.get("deliverable_type", "spec")
+        count = self.config.get("output_count", 3)
 
-        self.designs = self._generate_brushes(style, count)
+        self.designs = self._produce_designs(
+            research=research,
+            dtype=deliverable_type,
+            count=count,
+        )
         return {
-            "style": style,
+            "deliverable_type": deliverable_type,
             "count": len(self.designs),
             "designs": self.designs,
         }
 
-    def _generate_brushes(self, style: str, count: int) -> list:
-        """Produce brush design specs. AI image gen goes here."""
+    def _produce_designs(
+        self,
+        research: dict,
+        dtype: str,
+        count: int,
+    ) -> list:
+        """Core design logic — override or extend for specific domains."""
         designs = []
         for i in range(count):
             designs.append({
-                "name": f"{style.replace(' ', '_')}_{i + 1}",
-                "description": f"{style.title()} brush #{i + 1}",
-                "type": "procreate_brush",
-                "parameters": {
-                    "size": "variable",
-                    "opacity": "pressure-sensitive",
-                    "texture": style.split()[0].lower(),
+                "name": f"{dtype}_{i + 1}",
+                "description": f"{dtype.title()} design #{i + 1}",
+                "type": dtype,
+                "spec": {
+                    "version": "1.0",
+                    "status": "draft",
+                    "informed_by": research.get("topic", "research"),
                 },
             })
         return designs

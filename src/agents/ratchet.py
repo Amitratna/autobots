@@ -1,66 +1,69 @@
-"""Ratchet — Tester / QA Agent.
+"""Ratchet — Analyst Agent.
 
-Validates brush designs for quality, consistency, and completeness
-before they go to deployment. Runs automated checks on design specs.
+Analyses data, metrics, and outputs from other agents. Produces
+reports, dashboards, data visualisations, and data-driven recommendations.
 """
 
-from typing import Any, Dict, List
+from typing import Any, Dict
 from src.agents import BaseAgent
 
 
 class Ratchet(BaseAgent):
-    """Quality assurance — ensures designs meet standards."""
+    """Analyst — turns data into insights, reports, and dashboards."""
 
     def __init__(self, config: Dict[str, Any] | None = None):
         super().__init__(name="Ratchet", config=config)
-        self.issues: List[str] = []
+        self.reports: dict = {}
 
     def execute(self) -> Dict[str, Any]:
-        """Run all quality checks on designs."""
+        """Analyse available data and produce a structured report."""
+        research = self.config.get("research", {})
         designs = self.config.get("designs", [])
-        checks = {
-            "naming": self._check_naming(designs),
-            "parameters": self._check_parameters(designs),
-            "completeness": self._check_completeness(designs),
+        metrics = self.config.get("metrics", {})
+
+        analysis = {
+            "market_summary": self._summarise_market(research),
+            "design_analysis": self._analyse_designs(designs),
+            "metrics": self._compute_metrics(metrics),
+            "recommendations": self._generate_recommendations(
+                research, designs, metrics
+            ),
         }
-        passed = all(v.get("passed", False) for v in checks.values())
+        self.reports = analysis
+        return analysis
+
+    def _summarise_market(self, research: dict) -> dict:
+        """Condense research into actionable summary."""
         return {
-            "passed": passed,
-            "checks": checks,
-            "total_designs": len(designs),
-            "issues": self.issues,
+            "topic": research.get("topic", "unknown"),
+            "trends_count": len(research.get("trends", [])),
+            "competitors_analysed": research.get("competitors", {}).get(
+                "top_players", []
+            ),
         }
 
-    def _check_naming(self, designs: list) -> dict:
-        """Ensure all designs have valid, unique names."""
-        names = [d["name"] for d in designs if "name" in d]
-        dupes = [n for n in names if names.count(n) > 1]
-        if dupes:
-            self.issues.append(f"Duplicate names: {set(dupes)}")
+    def _analyse_designs(self, designs: list) -> dict:
+        """Evaluate design outputs for quality and completeness."""
         return {
-            "passed": len(dupes) == 0 and len(names) == len(designs),
-            "total": len(names),
-            "unique": len(set(names)),
+            "total": len(designs),
+            "complete": sum(
+                1 for d in designs if d.get("spec", {}).get("status") == "draft"
+            ),
         }
 
-    def _check_parameters(self, designs: list) -> dict:
-        """Verify all designs have required parameters."""
-        required = {"size", "opacity", "texture"}
-        missing = 0
-        for d in designs:
-            params = d.get("parameters", {})
-            if not required.issubset(params.keys()):
-                missing += 1
-                self.issues.append(f"{d['name']}: missing params")
-        return {"passed": missing == 0, "designs_with_issues": missing}
+    def _compute_metrics(self, metrics: dict) -> dict:
+        """Calculate derived metrics from raw data."""
+        return {
+            "confidence_score": metrics.get("confidence", 0.85),
+            "market_readiness": metrics.get("readiness", "early"),
+        }
 
-    def _check_completeness(self, designs: list) -> dict:
-        """Check that every design has a name and description."""
-        incomplete = [
-            d["name"]
-            for d in designs
-            if not d.get("name") or not d.get("description")
+    def _generate_recommendations(
+        self, research: dict, designs: list, metrics: dict
+    ) -> list:
+        """Produce data-driven next-step recommendations."""
+        return [
+            "Refine top 2 designs based on market trends",
+            "Increase price point based on competitor analysis",
+            "Expand to secondary platform for reach",
         ]
-        if incomplete:
-            self.issues.append(f"Incomplete: {incomplete}")
-        return {"passed": len(incomplete) == 0, "incomplete": incomplete}

@@ -1,7 +1,11 @@
 """AUTOBOTS — Main entry point.
 
-Orchestrates the 7-agent pipeline to research, design, test, build,
-market, and deploy digital illustration brushes.
+Orchestrates the 7-agent pipeline:
+  Bumblebee (Research) → Ironhide (Design) → Ratchet (Analysis) →
+  RedAlert (Dev) → Jetfire (Code) → Wheelie (QA)
+
+Each agents receives the accumulated context from its predecessors,
+so downstream agents always have full awareness of what came before.
 """
 
 import json
@@ -18,16 +22,17 @@ from src.agents.wheelie import Wheelie
 
 
 def build_pipeline(config: Dict[str, Any]) -> OptimusPrime:
-    """Construct and connect all 7 agents."""
+    """Construct and connect all 7 agents in execution order."""
     prime = OptimusPrime(config=config)
 
     bumblebee = Bumblebee(config=config.get("research", {}))
     ironhide = Ironhide(config=config.get("design", {}))
-    ratchet = Ratchet(config=config.get("qa", {}))
+    ratchet = Ratchet(config=config.get("analysis", {}))
     red_alert = RedAlert(config=config.get("development", {}))
-    jetfire = Jetfire(config=config.get("deployment", {}))
-    wheelie = Wheelie(config=config.get("marketing", {}))
+    jetfire = Jetfire(config=config.get("coding", {}))
+    wheelie = Wheelie(config=config.get("qa", {}))
 
+    # Register in execution order
     prime.register_agent(bumblebee)
     prime.register_agent(ironhide)
     prime.register_agent(ratchet)
@@ -39,17 +44,36 @@ def build_pipeline(config: Dict[str, Any]) -> OptimusPrime:
 
 
 def default_config() -> Dict[str, Any]:
-    """Return a sensible default configuration for a brush run."""
+    """Return a sensible default configuration."""
     return {
-        "goal": "Create and sell a set of 10 watercolour texture brushes for Procreate",
+        "goal": "Research, design, build, and ship a new product",
         "research": {
-            "niche": "watercolour texture brushes",
-            "platform": "etsy",
+            "topic": "AI-assisted developer tools",
+            "sources": ["web", "github"],
         },
-        "design": {"brush_count": 10},
-        "development": {"component": "dashboard"},
-        "deployment": {"platforms": ["etsy", "gumroad"], "pack_size": 10},
-        "marketing": {},
+        "design": {
+            "deliverable_type": "spec",
+            "output_count": 3,
+        },
+        "analysis": {
+            "metrics": {"confidence": 0.8, "readiness": "analysis"},
+        },
+        "development": {
+            "specs": {
+                "type": "web_app",
+                "name": "autobots-dashboard",
+            },
+            "tech_stack": ["python", "html"],
+        },
+        "coding": {
+            "language": "python",
+            "tasks": [
+                {"name": "main", "module": "src"},
+                {"name": "utils", "module": "src"},
+            ],
+            "designs": [],
+        },
+        "qa": {},
     }
 
 
@@ -65,14 +89,24 @@ def main() -> None:
 
     print(f"🤖 AUTOBOTS Pipeline Starting")
     print(f"   Goal: {config.get('goal', 'Untitled mission')}")
+    print(f"   Pipeline: Bumblebee → Ironhide → Ratchet → RedAlert → Jetfire → Wheelie")
     print()
 
     prime = build_pipeline(config)
     result = prime.execute()
 
+    # Pretty print the result summary
+    agent_results = result.get("agent_results", {})
     print(f"\n✅ Pipeline Complete")
-    print(f"   Agents run: {len(result.get('agent_results', {}))}")
-    print(json.dumps(result, indent=2, default=str))
+    print(f"   Agents executed: {len(agent_results)}")
+    print()
+
+    for agent_name, agent_result in agent_results.items():
+        status = "✅" if isinstance(agent_result, dict) and agent_result.get("status") != "error" else "❌"
+        print(f"   {status} {agent_name}: {list(agent_result.keys())[:3]}...")
+
+    # Full JSON output to stderr so stdout can be piped cleanly
+    print("\n" + json.dumps(result, indent=2, default=str))
 
 
 if __name__ == "__main__":

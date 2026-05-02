@@ -1,73 +1,129 @@
-"""Wheelie — Marketing Agent.
+"""Wheelie — Quality Inspector Agent.
 
-Creates product titles, descriptions, tags, and promotional copy
-for Etsy and Gumroad listings. Optimises for search and conversion.
+Reviews all outputs from the pipeline — design specs, code, copy,
+data — for quality, consistency, correctness, and completeness.
+The last line of defence before shipping.
 """
 
-from typing import Any, Dict
+from typing import Any, Dict, List
 from src.agents import BaseAgent
 
 
 class Wheelie(BaseAgent):
-    """Marketer — copywriting, SEO, and campaign generation."""
+    """Quality Inspector — validates everything before it ships."""
 
     def __init__(self, config: Dict[str, Any] | None = None):
         super().__init__(name="Wheelie", config=config)
-        self.campaigns: list = []
+        self.issues: List[str] = []
+        self.review_log: List[dict] = []
 
     def execute(self) -> Dict[str, Any]:
-        """Generate marketing materials for all products."""
-        packs = self.config.get("packs", [])
+        """Run all quality checks across the pipeline outputs."""
         research = self.config.get("research", {})
-        keywords = research.get("keywords", [])
+        designs = self.config.get("designs", [])
+        code_artifacts = self.config.get("code_artifacts", [])
+        analysis = self.config.get("analysis", {})
 
-        for pack in packs:
-            campaign = self._create_campaign(pack, keywords)
-            self.campaigns.append(campaign)
-
-        return {
-            "campaigns": self.campaigns,
-            "total_products": len(packs),
+        checks = {
+            "research_quality": self._check_research(research),
+            "design_quality": self._check_designs(designs),
+            "code_quality": self._check_code(code_artifacts),
+            "analysis_quality": self._check_analysis(analysis),
+            "consistency": self._check_global_consistency(
+                research, designs, code_artifacts
+            ),
         }
 
-    def _create_campaign(self, pack: dict, keywords: list) -> dict:
-        """Generate title, description, tags, and social copy."""
-        name = pack.get("name", "Brush Pack")
-        count = pack.get("count", 10)
-        kw_str = ", ".join(keywords[:5]) if keywords else "digital brushes"
-
+        passed = all(v.get("passed", False) for v in checks.values())
         return {
-            "product": name,
-            "title": self._generate_title(name, count),
-            "description": self._generate_description(name, count, kw_str),
-            "tags": self._generate_tags(keywords),
-            "social_copy": self._generate_social(name, count),
+            "passed": passed,
+            "checks": checks,
+            "total_issues": len(self.issues),
+            "issues": self.issues,
+            "review_log": self.review_log,
         }
 
-    @staticmethod
-    def _generate_title(name: str, count: int) -> str:
-        return f"{count} Premium Digital Art Brushes – {name} for Procreate"
+    def _check_research(self, research: dict) -> dict:
+        """Validate research outputs."""
+        issues = []
+        if not research.get("trends"):
+            issues.append("No trends identified")
+        if not research.get("competitors"):
+            issues.append("No competitor analysis")
+        self.issues.extend(issues)
+        return {"passed": len(issues) == 0, "issues": issues}
 
-    @staticmethod
-    def _generate_description(name: str, count: int, keywords: str) -> str:
-        return (
-            f"Elevate your digital art with this collection of {count} "
-            f"hand-crafted {name.lower()}. Perfect for illustrators, "
-            f"lettering artists, and designers.\n\n"
-            f"Includes: {keywords}\n\n"
-            f"Compatible with: Procreate, Photoshop, Affinity\n"
-            f"File format: .brushset / .abr / .png stamps"
+    def _check_designs(self, designs: list) -> dict:
+        """Validate design outputs for required fields."""
+        if not designs:
+            self.issues.append("No designs produced")
+            return {"passed": False, "issues": ["No designs"]}
+
+        missing_fields = 0
+        for d in designs:
+            if not d.get("name"):
+                missing_fields += 1
+                self.issues.append("Design missing name")
+            if not d.get("spec"):
+                missing_fields += 1
+                self.issues.append("Design missing spec")
+
+        return {
+            "passed": missing_fields == 0,
+            "total": len(designs),
+            "issues_count": missing_fields,
+        }
+
+    def _check_code(self, artifacts: list) -> dict:
+        """Validate code artifacts were produced."""
+        if not artifacts:
+            self.issues.append("No code artifacts produced")
+            return {"passed": False, "issues": ["No code artifacts"]}
+
+        self.review_log.append(
+            f"Reviewed {len(artifacts)} code artifacts"
         )
+        return {
+            "passed": True,
+            "artifact_count": len(artifacts),
+            "artifacts": artifacts,
+        }
 
-    @staticmethod
-    def _generate_tags(keywords: list) -> list:
-        return (keywords[:10] if keywords
-                else ["procreate", "brushes", "digital art"])
+    def _check_analysis(self, analysis: dict) -> dict:
+        """Validate analysis outputs."""
+        if not analysis.get("recommendations"):
+            self.issues.append("No recommendations produced")
+            return {"passed": False, "issues": ["Missing recommendations"]}
+        return {"passed": True, "recommendations": len(analysis["recommendations"])}
 
-    @staticmethod
-    def _generate_social(name: str, count: int) -> str:
-        return (
-            f"✨ Just created {count} new {name.lower()} — "
-            f"perfect for your next digital illustration! 🎨 "
-            f"Link in bio #digitalart #procreatebrushes"
-        )
+    def _check_global_consistency(
+        self,
+        research: dict,
+        designs: list,
+        code_artifacts: list,
+    ) -> dict:
+        """Cross-check that all outputs are consistent with each other."""
+        topic = research.get("topic", "").lower()
+        design_topics = [
+            d.get("spec", {}).get("informed_by", "").lower()
+            for d in designs
+        ]
+
+        inconsistent = [
+            d_name
+            for d_name, d_topic in zip(
+                [d.get("name", "?") for d in designs], design_topics
+            )
+            if d_topic and topic and d_topic != topic
+        ]
+
+        if inconsistent:
+            self.issues.append(
+                f"Inconsistent designs: {inconsistent}"
+            )
+
+        return {
+            "passed": len(inconsistent) == 0,
+            "topic_alignment": topic,
+            "inconsistent_designs": inconsistent,
+        }
