@@ -111,7 +111,27 @@ class TestBumblebee:
         assert "trends" in result
         assert "competitors" in result
         assert "opportunities" in result
-        assert "raw_data" in result
+        assert "deep_dive" in result
+        assert "sources_used" in result
+
+    def test_execute_real_data_sources(self):
+        """Bumblebee should return real data from live sources."""
+        bee = Bumblebee(config={"topic": "Python programming language"})
+        result = bee.execute()
+        # Should have real data from at least one source
+        assert len(result.get("sources_used", [])) > 0
+        # Deep dive should have real Wikipedia results
+        deep = result.get("deep_dive", {})
+        if deep.get("wikipedia_articles"):
+            assert len(deep["wikipedia_articles"]) > 0
+
+    def test_deep_dive_returns_wikipedia(self):
+        bee = Bumblebee(config={"topic": "Artificial intelligence"})
+        result = bee.execute()
+        deep = result.get("deep_dive", {})
+        # Wikipedia should return results for "artificial intelligence"
+        if deep.get("wikipedia_summary"):
+            assert "intelligence" in deep["wikipedia_summary"].lower()
 
     def test_default_topic(self):
         bee = Bumblebee()
