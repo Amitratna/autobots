@@ -142,29 +142,46 @@ class TestBumblebee:
 # ─── Ironhide (Designer) ──────────────────────────────────────────────
 
 class TestIronhide:
-    def test_execute_returns_designs(self):
-        ih = Ironhide(config={"output_count": 3})
+    def test_execute_generates_html(self):
+        ih = Ironhide(config={
+            "page_type": "landing",
+            "brand": "TestBrand",
+            "research": {"topic": "test topic"},
+        })
         result = ih.execute()
-        assert result["count"] == 3
-        assert len(result["designs"]) == 3
+        assert result["deliverable_type"] == "landing_html"
+        assert result["count"] == 4  # landing, saas_landing, pricing, about
+        assert "primary_page" in result
+        assert result["primary_page"]["html_size_bytes"] > 1000
+        assert result["primary_page"]["file_path"].endswith(".html")
 
-    def test_each_design_has_required_fields(self):
-        ih = Ironhide(config={"output_count": 2})
+    def test_uses_design_system(self):
+        ih = Ironhide(config={
+            "page_type": "landing",
+            "research": {"topic": "Artificial intelligence"},
+        })
         result = ih.execute()
-        for d in result["designs"]:
-            assert "name" in d
-            assert "description" in d
-            assert "type" in d
-            assert "spec" in d
+        assert result["design_system_used"] is not None
+        assert result["available_design_systems"] > 0
+
+    def test_generates_multi_page_set(self):
+        ih = Ironhide(config={
+            "research": {"topic": "developer tools"},
+        })
+        result = ih.execute()
+        assert len(result["generated_pages"]) >= 3
+        for p in result["generated_pages"]:
+            assert p["status"] == "generated"
+            assert p["size_bytes"] > 500
 
     def test_deliverable_type_configurable(self):
         ih = Ironhide(config={
-            "output_count": 1,
-            "deliverable_type": "wireframe",
+            "page_type": "saas_landing",
+            "research": {"topic": "SaaS platform"},
         })
         result = ih.execute()
-        assert result["deliverable_type"] == "wireframe"
-        assert result["designs"][0]["type"] == "wireframe"
+        assert result["deliverable_type"] == "saas_landing_html"
+        assert result["primary_page"]["type"] == "saas_landing"
 
 
 # ─── Ratchet (Analyst) ────────────────────────────────────────────────
