@@ -1,0 +1,57 @@
+[
+    {
+        "id": "brush-pack-001",
+        "name": "Procreate Watercolor Brushes",
+        "description": "A set of 20 high-quality watercolor brushes for Procreate, perfect for digital artists.",
+        "price": 12.99,
+        "category": "procreate",
+        "tags": ["watercolor", "painting", "illustration"],
+        "image": "/static/images/brush-pack-001.jpg"
+    },
+    {
+        "id": "brush-pack-002",
+        "name": "Photoshop Ink Brushes",
+        "description": "15 authentic ink brushes for Adobe Photoshop, great for comic artists and illustrators.",
+        "price": 9.99,
+        "category": "photoshop",
+        "tags": ["ink", "comic", "line art"],
+        "image": "/static/images/brush-pack-002.jpg"
+    },
+    {
+        "id": "brush-pack-003",
+        "name": "Affinity Designer Texture Pack",
+        "description": "30 procedural texture brushes for Affinity Designer, perfect for adding depth to your designs.",
+        "price": 14.99,
+        "category": "affinity-designer",
+        "tags": ["texture", "design", "procedural"],
+        "image": "/static/images/brush-pack-003.jpg"
+    }
+    ,
+    {
+        "id": "brush-pack-004",
+        "name": "Procreate Charcoal Brushes",
+        "description": "A set of 15 textured charcoal brushes for Procreate, ideal for sketching and adding grit.",
+        "price": 10.99,
+        "category": "procreate",
+        "tags": ["charcoal", "sketching", "texture"],
+        "image": "/static/images/brush-pack-004.jpg"
+    },
+    {
+        "id": "brush-pack-005",
+        "name": "Photoshop Watercolor Brushes",
+        "description": "20 watercolor brushes for Photoshop, perfect for painterly effects.",
+        "price": 11.99,
+        "category": "photoshop",
+        "tags": ["watercolor", "painting", "effects"],
+        "image": "/static/images/brush-pack-005.jpg"
+    },
+    {
+        "id": "brush-pack-006",
+        "name": "Affinity Designer Halftone Brushes",
+        "description": "25 halftone and pattern brushes for Affinity Designer, great for retro graphics.",
+        "price": 13.99,
+        "category": "affinity-designer",
+        "tags": ["halftone", "retro", "patterns"],
+        "image": "/static/images/brush-pack-006.jpg"
+    }
+]
