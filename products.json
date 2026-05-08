@@ -10,7 +10,7 @@
             "painting",
             "illustration"
         ],
-        "image": "/static/images/brush-pack-001.jpg"
+        "image": "/static/images/brush-pack-001.svg"
     },
     {
         "id": "brush-pack-002",
@@ -23,7 +23,7 @@
             "comic",
             "line art"
         ],
-        "image": "/static/images/brush-pack-002.jpg"
+        "image": "/static/images/brush-pack-002.svg"
     },
     {
         "id": "brush-pack-003",
@@ -36,7 +36,7 @@
             "design",
             "procedural"
         ],
-        "image": "/static/images/brush-pack-003.jpg"
+        "image": "/static/images/brush-pack-003.svg"
     },
     {
         "id": "brush-pack-004",
@@ -49,7 +49,7 @@
             "sketching",
             "texture"
         ],
-        "image": "/static/images/brush-pack-004.jpg"
+        "image": "/static/images/brush-pack-004.svg"
     },
     {
         "id": "brush-pack-005",
@@ -62,7 +62,7 @@
             "painting",
             "effects"
         ],
-        "image": "/static/images/brush-pack-005.jpg"
+        "image": "/static/images/brush-pack-005.svg"
     },
     {
         "id": "brush-pack-006",
@@ -75,7 +75,7 @@
             "retro",
             "patterns"
         ],
-        "image": "/static/images/brush-pack-006.jpg"
+        "image": "/static/images/brush-pack-006.svg"
     },
     {
         "id": "brush-pack-007",
@@ -88,7 +88,7 @@
             "painting",
             "art"
         ],
-        "image": "/static/images/brush-pack-007.jpg"
+        "image": "/static/images/brush-pack-007.svg"
     },
     {
         "id": "brush-pack-008",
@@ -101,7 +101,7 @@
             "lettering",
             "illustration"
         ],
-        "image": "/static/images/brush-pack-008.jpg"
+        "image": "/static/images/brush-pack-008.svg"
     },
     {
         "id": "brush-pack-009",
@@ -114,7 +114,7 @@
             "sketch",
             "drawing"
         ],
-        "image": "/static/images/brush-pack-009.jpg"
+        "image": "/static/images/brush-pack-009.svg"
     },
     {
         "id": "brush-pack-010",
@@ -127,7 +127,7 @@
             "watercolor",
             "ink"
         ],
-        "image": "/static/images/brush-pack-010.jpg"
+        "image": "/static/images/brush-pack-010.svg"
     },
     {
         "id": "brush-pack-011",
@@ -140,7 +140,7 @@
             "stamp",
             "pattern"
         ],
-        "image": "/static/images/brush-pack-011.jpg"
+        "image": "/static/images/brush-pack-011.svg"
     },
     {
         "id": "brush-pack-012",
@@ -152,7 +152,7 @@
             "gouache",
             "painting"
         ],
-        "image": "/static/images/brush-pack-012.jpg"
+        "image": "/static/images/brush-pack-012.svg"
     },
     {
         "id": "brush-pack-013",
@@ -164,7 +164,7 @@
             "marker",
             "inking"
         ],
-        "image": "/static/images/brush-pack-013.jpg"
+        "image": "/static/images/brush-pack-013.svg"
     },
     {
         "id": "brush-pack-014",
@@ -176,7 +176,7 @@
             "smudge",
             "blending"
         ],
-        "image": "/static/images/brush-pack-014.jpg"
+        "image": "/static/images/brush-pack-014.svg"
     },
     {
         "id": "brush-pack-015",
@@ -189,7 +189,7 @@
             "brush",
             "design"
         ],
-        "image": "/static/images/brush-pack-015.jpg"
+        "image": "/static/images/brush-pack-015.svg"
     },
     {
         "id": "brush-pack-016",
@@ -202,7 +202,7 @@
             "design",
             "pattern"
         ],
-        "image": "/static/images/brush-pack-016.jpg"
+        "image": "/static/images/brush-pack-016.svg"
     },
     {
         "id": "brush-pack-017",
@@ -215,7 +215,7 @@
             "lettering",
             "ink"
         ],
-        "image": "/static/images/brush-pack-017.jpg"
+        "image": "/static/images/brush-pack-017.svg"
     },
     {
         "id": "brush-pack-018",
@@ -228,7 +228,7 @@
             "retro",
             "pattern"
         ],
-        "image": "/static/images/brush-pack-018.jpg"
+        "image": "/static/images/brush-pack-018.svg"
     },
     {
         "id": "preset-019",
@@ -241,7 +241,7 @@
             "color grading",
             "film"
         ],
-        "image": "/static/images/preset-019.jpg"
+        "image": "/static/images/preset-019.svg"
     },
     {
         "id": "preset-020",
@@ -254,7 +254,7 @@
             "retouching",
             "skin tone"
         ],
-        "image": "/static/images/preset-020.jpg"
+        "image": "/static/images/preset-020.svg"
     },
     {
         "id": "illustrator-021",
@@ -267,7 +267,7 @@
             "vector",
             "illustration"
         ],
-        "image": "/static/images/illustrator-021.jpg"
+        "image": "/static/images/illustrator-021.svg"
     },
     {
         "id": "illustrator-022",
@@ -280,7 +280,7 @@
             "patterns",
             "retro"
         ],
-        "image": "/static/images/illustrator-022.jpg"
+        "image": "/static/images/illustrator-022.svg"
     },
     {
         "id": "figma-023",
@@ -294,7 +294,7 @@
             "banking",
             "Figma"
         ],
-        "image": "/static/images/figma-023.jpg"
+        "image": "/static/images/figma-023.svg"
     },
     {
         "id": "figma-024",
@@ -307,7 +307,7 @@
             "design system",
             "Figma"
         ],
-        "image": "/static/images/figma-024.jpg"
+        "image": "/static/images/figma-024.svg"
     },
     {
         "id": "affinity-photo-025",
@@ -320,7 +320,7 @@
             "presets",
             "analog"
         ],
-        "image": "/static/images/affinity-photo-025.jpg"
+        "image": "/static/images/affinity-photo-025.svg"
     },
     {
         "id": "affinity-photo-026",
@@ -333,7 +333,7 @@
             "glow",
             "light leak"
         ],
-        "image": "/static/images/affinity-photo-026.jpg"
+        "image": "/static/images/affinity-photo-026.svg"
     },
     {
         "id": "csp-027",
@@ -347,7 +347,7 @@
             "inking",
             "CSP"
         ],
-        "image": "/static/images/csp-027.jpg"
+        "image": "/static/images/csp-027.svg"
     },
     {
         "id": "csp-028",
@@ -361,7 +361,7 @@
             "reference",
             "CSP"
         ],
-        "image": "/static/images/csp-028.jpg"
+        "image": "/static/images/csp-028.svg"
     },
     {
         "id": "templates-029",
@@ -375,7 +375,7 @@
             "social media",
             "templates"
         ],
-        "image": "/static/images/templates-029.jpg"
+        "image": "/static/images/templates-029.svg"
     },
     {
         "id": "templates-030",
@@ -389,6 +389,6 @@
             "thumbnail",
             "templates"
         ],
-        "image": "/static/images/templates-030.jpg"
+        "image": "/static/images/templates-030.svg"
     }
 ]
