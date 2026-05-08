@@ -1,394 +1,645 @@
 [
-    {
-        "id": "brush-pack-001",
-        "name": "Procreate Watercolor Brushes",
-        "description": "A set of 20 high-quality watercolor brushes for Procreate, perfect for digital artists.",
-        "price": 12.99,
-        "category": "procreate",
-        "tags": [
-            "watercolor",
-            "painting",
-            "illustration"
-        ],
-        "image": "/static/images/brush-pack-001.svg"
-    },
-    {
-        "id": "brush-pack-002",
-        "name": "Photoshop Ink Brushes",
-        "description": "15 authentic ink brushes for Adobe Photoshop, great for comic artists and illustrators.",
-        "price": 9.99,
-        "category": "photoshop",
-        "tags": [
-            "ink",
-            "comic",
-            "line art"
-        ],
-        "image": "/static/images/brush-pack-002.svg"
-    },
-    {
-        "id": "brush-pack-003",
-        "name": "Affinity Designer Texture Pack",
-        "description": "30 procedural texture brushes for Affinity Designer, perfect for adding depth to your designs.",
-        "price": 14.99,
-        "category": "affinity-designer",
-        "tags": [
-            "texture",
-            "design",
-            "procedural"
-        ],
-        "image": "/static/images/brush-pack-003.svg"
-    },
-    {
-        "id": "brush-pack-004",
-        "name": "Procreate Charcoal Brushes",
-        "description": "A set of 15 textured charcoal brushes for Procreate, ideal for sketching and adding grit.",
-        "price": 10.99,
-        "category": "procreate",
-        "tags": [
-            "charcoal",
-            "sketching",
-            "texture"
-        ],
-        "image": "/static/images/brush-pack-004.svg"
-    },
-    {
-        "id": "brush-pack-005",
-        "name": "Photoshop Watercolor Brushes",
-        "description": "20 watercolor brushes for Photoshop, perfect for painterly effects.",
-        "price": 11.99,
-        "category": "photoshop",
-        "tags": [
-            "watercolor",
-            "painting",
-            "effects"
-        ],
-        "image": "/static/images/brush-pack-005.svg"
-    },
-    {
-        "id": "brush-pack-006",
-        "name": "Affinity Designer Halftone Brushes",
-        "description": "25 halftone and pattern brushes for Affinity Designer, great for retro graphics.",
-        "price": 13.99,
-        "category": "affinity-designer",
-        "tags": [
-            "halftone",
-            "retro",
-            "patterns"
-        ],
-        "image": "/static/images/brush-pack-006.svg"
-    },
-    {
-        "id": "brush-pack-007",
-        "name": "Procreate Gouache Brushes",
-        "description": "A set of 15 high-quality gouache brushes for Procreate, perfect for painterly effects.",
-        "price": 13.99,
-        "category": "procreate",
-        "tags": [
-            "gouache",
-            "painting",
-            "art"
-        ],
-        "image": "/static/images/brush-pack-007.svg"
-    },
-    {
-        "id": "brush-pack-008",
-        "name": "Procreate Marker Pens",
-        "description": "20 authentic marker pens for Procreate, ideal for lettering and comic illustration.",
-        "price": 11.99,
-        "category": "procreate",
-        "tags": [
-            "marker",
-            "lettering",
-            "illustration"
-        ],
-        "image": "/static/images/brush-pack-008.svg"
-    },
-    {
-        "id": "brush-pack-009",
-        "name": "Procreate Pencil Sketch Pack",
-        "description": "25 textured pencil brushes for Procreate, great for sketching and drawing.",
-        "price": 12.99,
-        "category": "procreate",
-        "tags": [
-            "pencil",
-            "sketch",
-            "drawing"
-        ],
-        "image": "/static/images/brush-pack-009.svg"
-    },
-    {
-        "id": "brush-pack-010",
-        "name": "Procreate Wet Media Brushes",
-        "description": "18 brushes simulating wet media like watercolor and ink for Procreate.",
-        "price": 14.99,
-        "category": "procreate",
-        "tags": [
-            "wet media",
-            "watercolor",
-            "ink"
-        ],
-        "image": "/static/images/brush-pack-010.svg"
-    },
-    {
-        "id": "brush-pack-011",
-        "name": "Procreate Texture Stamps",
-        "description": "30 stamp textures for Procreate, perfect for adding patterns and gritty effects.",
-        "price": 9.99,
-        "category": "procreate",
-        "tags": [
-            "texture",
-            "stamp",
-            "pattern"
-        ],
-        "image": "/static/images/brush-pack-011.svg"
-    },
-    {
-        "id": "brush-pack-012",
-        "name": "Photoshop Gouache Brushes",
-        "description": "12 gouache brushes for Photoshop, offering a natural paint-like feel.",
-        "price": 12.99,
-        "category": "photoshop",
-        "tags": [
-            "gouache",
-            "painting"
-        ],
-        "image": "/static/images/brush-pack-012.svg"
-    },
-    {
-        "id": "brush-pack-013",
-        "name": "Photoshop Marker Set",
-        "description": "22 marker brushes for Photoshop, excellent for inking and bold strokes.",
-        "price": 10.99,
-        "category": "photoshop",
-        "tags": [
-            "marker",
-            "inking"
-        ],
-        "image": "/static/images/brush-pack-013.svg"
-    },
-    {
-        "id": "brush-pack-014",
-        "name": "Photoshop Smudge Tools",
-        "description": "15 smudge brushes for Photoshop, perfect for blending and subtle effects.",
-        "price": 11.99,
-        "category": "photoshop",
-        "tags": [
-            "smudge",
-            "blending"
-        ],
-        "image": "/static/images/brush-pack-014.svg"
-    },
-    {
-        "id": "brush-pack-015",
-        "name": "Affinity Designer Vector Brush Pack",
-        "description": "30 versatile vector brushes for Affinity Designer to create dynamic strokes.",
-        "price": 15.99,
-        "category": "affinity-designer",
-        "tags": [
-            "vector",
-            "brush",
-            "design"
-        ],
-        "image": "/static/images/brush-pack-015.svg"
-    },
-    {
-        "id": "brush-pack-016",
-        "name": "Affinity Designer Texture Brushes",
-        "description": "25 texture brushes for Affinity Designer, adding depth and tactile quality.",
-        "price": 13.99,
-        "category": "affinity-designer",
-        "tags": [
-            "texture",
-            "design",
-            "pattern"
-        ],
-        "image": "/static/images/brush-pack-016.svg"
-    },
-    {
-        "id": "brush-pack-017",
-        "name": "Affinity Designer Calligraphy Brushes",
-        "description": "18 calligraphy brushes for Affinity Designer, perfect for lettering and decorative work.",
-        "price": 12.99,
-        "category": "affinity-designer",
-        "tags": [
-            "calligraphy",
-            "lettering",
-            "ink"
-        ],
-        "image": "/static/images/brush-pack-017.svg"
-    },
-    {
-        "id": "brush-pack-018",
-        "name": "Affinity Designer Halftone Brushes",
-        "description": "20 halftone and dot pattern brushes for Affinity Designer, great for retro effects.",
-        "price": 11.99,
-        "category": "affinity-designer",
-        "tags": [
-            "halftone",
-            "retro",
-            "pattern"
-        ],
-        "image": "/static/images/brush-pack-018.svg"
-    },
-    {
-        "id": "preset-019",
-        "name": "Cinematic Lightroom Presets",
-        "description": "25 cinematic color grading presets for Adobe Lightroom, perfect for film photographers.",
-        "price": 19.99,
-        "category": "lightroom",
-        "tags": [
-            "cinematic",
-            "color grading",
-            "film"
-        ],
-        "image": "/static/images/preset-019.svg"
-    },
-    {
-        "id": "preset-020",
-        "name": "Portrait Lightroom Presets",
-        "description": "30 retouching and skin-tone presets for professional portrait photography in Lightroom.",
-        "price": 17.99,
-        "category": "lightroom",
-        "tags": [
-            "portrait",
-            "retouching",
-            "skin tone"
-        ],
-        "image": "/static/images/preset-020.svg"
-    },
-    {
-        "id": "illustrator-021",
-        "name": "Illustrator Texture Brushes",
-        "description": "20 vector texture brushes for Adobe Illustrator to add organic grit and patterns.",
-        "price": 14.99,
-        "category": "illustrator",
-        "tags": [
-            "texture",
-            "vector",
-            "illustration"
-        ],
-        "image": "/static/images/illustrator-021.svg"
-    },
-    {
-        "id": "illustrator-022",
-        "name": "Illustrator Vintage Patterns",
-        "description": "35 seamless vintage pattern swatches for Illustrator, ideal for retro designs.",
-        "price": 16.99,
-        "category": "illustrator",
-        "tags": [
-            "vintage",
-            "patterns",
-            "retro"
-        ],
-        "image": "/static/images/illustrator-022.svg"
-    },
-    {
-        "id": "figma-023",
-        "name": "Figma Mobile Banking UI Kit",
-        "description": "A comprehensive Figma UI kit for mobile banking apps with 60+ screens and components.",
-        "price": 29.99,
-        "category": "figma",
-        "tags": [
-            "UI kit",
-            "mobile",
-            "banking",
-            "Figma"
-        ],
-        "image": "/static/images/figma-023.svg"
-    },
-    {
-        "id": "figma-024",
-        "name": "Figma Dashboard Design System",
-        "description": "A modular dashboard design system for Figma, including charts, tables, and widgets.",
-        "price": 34.99,
-        "category": "figma",
-        "tags": [
-            "dashboard",
-            "design system",
-            "Figma"
-        ],
-        "image": "/static/images/figma-024.svg"
-    },
-    {
-        "id": "affinity-photo-025",
-        "name": "Affinity Photo Film Presets",
-        "description": "15 film simulation presets for Affinity Photo, emulating classic analog stocks.",
-        "price": 14.99,
-        "category": "affinity-photo",
-        "tags": [
-            "film",
-            "presets",
-            "analog"
-        ],
-        "image": "/static/images/affinity-photo-025.svg"
-    },
-    {
-        "id": "affinity-photo-026",
-        "name": "Affinity Photo Glow Overlays",
-        "description": "25 light leak and glow overlays for Affinity Photo to add warmth and atmosphere.",
-        "price": 12.99,
-        "category": "affinity-photo",
-        "tags": [
-            "overlays",
-            "glow",
-            "light leak"
-        ],
-        "image": "/static/images/affinity-photo-026.svg"
-    },
-    {
-        "id": "csp-027",
-        "name": "Clip Studio Paint Manga Brushes",
-        "description": "Manga-optimized brushes for Clip Studio Paint, including tones, inking, and screentones.",
-        "price": 16.99,
-        "category": "clip-studio",
-        "tags": [
-            "manga",
-            "comic",
-            "inking",
-            "CSP"
-        ],
-        "image": "/static/images/csp-027.svg"
-    },
-    {
-        "id": "csp-028",
-        "name": "Clip Studio Paint 3D Character Base",
-        "description": "A basic 3D character model rigged for Clip Studio Paint, useful for pose references.",
-        "price": 19.99,
-        "category": "clip-studio",
-        "tags": [
-            "3D",
-            "character",
-            "reference",
-            "CSP"
-        ],
-        "image": "/static/images/csp-028.svg"
-    },
-    {
-        "id": "templates-029",
-        "name": "Instagram Post Templates Bundle",
-        "description": "50 customizable Instagram post templates for Canva, perfect for content creators.",
-        "price": 12.99,
-        "category": "templates",
-        "tags": [
-            "Canva",
-            "Instagram",
-            "social media",
-            "templates"
-        ],
-        "image": "/static/images/templates-029.svg"
-    },
-    {
-        "id": "templates-030",
-        "name": "YouTube Thumbnail Pack",
-        "description": "30 eye-catching YouTube thumbnail templates in Canva format, optimized for CTR.",
-        "price": 11.99,
-        "category": "templates",
-        "tags": [
-            "Canva",
-            "YouTube",
-            "thumbnail",
-            "templates"
-        ],
-        "image": "/static/images/templates-030.svg"
-    }
+  {
+    "id": "brush-pack-001",
+    "name": "Procreate Watercolor Brushes",
+    "description": "A set of 20 high-quality watercolor brushes for Procreate, perfect for digital artists.",
+    "price": 12.99,
+    "category": "procreate",
+    "tags": [
+      "watercolor",
+      "painting",
+      "illustration"
+    ],
+    "image": "/static/images/brush-pack-001.svg"
+  },
+  {
+    "id": "brush-pack-002",
+    "name": "Photoshop Ink Brushes",
+    "description": "15 authentic ink brushes for Adobe Photoshop, great for comic artists and illustrators.",
+    "price": 9.99,
+    "category": "photoshop",
+    "tags": [
+      "ink",
+      "comic",
+      "line art"
+    ],
+    "image": "/static/images/brush-pack-002.svg"
+  },
+  {
+    "id": "brush-pack-003",
+    "name": "Affinity Designer Texture Pack",
+    "description": "30 procedural texture brushes for Affinity Designer, perfect for adding depth to your designs.",
+    "price": 14.99,
+    "category": "affinity-designer",
+    "tags": [
+      "texture",
+      "design",
+      "procedural"
+    ],
+    "image": "/static/images/brush-pack-003.svg"
+  },
+  {
+    "id": "brush-pack-004",
+    "name": "Procreate Charcoal Brushes",
+    "description": "A set of 15 textured charcoal brushes for Procreate, ideal for sketching and adding grit.",
+    "price": 10.99,
+    "category": "procreate",
+    "tags": [
+      "charcoal",
+      "sketching",
+      "texture"
+    ],
+    "image": "/static/images/brush-pack-004.svg"
+  },
+  {
+    "id": "brush-pack-005",
+    "name": "Photoshop Watercolor Brushes",
+    "description": "20 watercolor brushes for Photoshop, perfect for painterly effects.",
+    "price": 11.99,
+    "category": "photoshop",
+    "tags": [
+      "watercolor",
+      "painting",
+      "effects"
+    ],
+    "image": "/static/images/brush-pack-005.svg"
+  },
+  {
+    "id": "brush-pack-006",
+    "name": "Affinity Designer Halftone Brushes",
+    "description": "25 halftone and pattern brushes for Affinity Designer, great for retro graphics.",
+    "price": 13.99,
+    "category": "affinity-designer",
+    "tags": [
+      "halftone",
+      "retro",
+      "patterns"
+    ],
+    "image": "/static/images/brush-pack-006.svg"
+  },
+  {
+    "id": "brush-pack-007",
+    "name": "Procreate Gouache Brushes",
+    "description": "A set of 15 high-quality gouache brushes for Procreate, perfect for painterly effects.",
+    "price": 13.99,
+    "category": "procreate",
+    "tags": [
+      "gouache",
+      "painting",
+      "art"
+    ],
+    "image": "/static/images/brush-pack-007.svg"
+  },
+  {
+    "id": "brush-pack-008",
+    "name": "Procreate Marker Pens",
+    "description": "20 authentic marker pens for Procreate, ideal for lettering and comic illustration.",
+    "price": 11.99,
+    "category": "procreate",
+    "tags": [
+      "marker",
+      "lettering",
+      "illustration"
+    ],
+    "image": "/static/images/brush-pack-008.svg"
+  },
+  {
+    "id": "brush-pack-009",
+    "name": "Procreate Pencil Sketch Pack",
+    "description": "25 textured pencil brushes for Procreate, great for sketching and drawing.",
+    "price": 12.99,
+    "category": "procreate",
+    "tags": [
+      "pencil",
+      "sketch",
+      "drawing"
+    ],
+    "image": "/static/images/brush-pack-009.svg"
+  },
+  {
+    "id": "brush-pack-010",
+    "name": "Procreate Wet Media Brushes",
+    "description": "18 brushes simulating wet media like watercolor and ink for Procreate.",
+    "price": 14.99,
+    "category": "procreate",
+    "tags": [
+      "wet media",
+      "watercolor",
+      "ink"
+    ],
+    "image": "/static/images/brush-pack-010.svg"
+  },
+  {
+    "id": "brush-pack-011",
+    "name": "Procreate Texture Stamps",
+    "description": "30 stamp textures for Procreate, perfect for adding patterns and gritty effects.",
+    "price": 9.99,
+    "category": "procreate",
+    "tags": [
+      "texture",
+      "stamp",
+      "pattern"
+    ],
+    "image": "/static/images/brush-pack-011.svg"
+  },
+  {
+    "id": "brush-pack-012",
+    "name": "Photoshop Gouache Brushes",
+    "description": "12 gouache brushes for Photoshop, offering a natural paint-like feel.",
+    "price": 12.99,
+    "category": "photoshop",
+    "tags": [
+      "gouache",
+      "painting"
+    ],
+    "image": "/static/images/brush-pack-012.svg"
+  },
+  {
+    "id": "brush-pack-013",
+    "name": "Photoshop Marker Set",
+    "description": "22 marker brushes for Photoshop, excellent for inking and bold strokes.",
+    "price": 10.99,
+    "category": "photoshop",
+    "tags": [
+      "marker",
+      "inking"
+    ],
+    "image": "/static/images/brush-pack-013.svg"
+  },
+  {
+    "id": "brush-pack-014",
+    "name": "Photoshop Smudge Tools",
+    "description": "15 smudge brushes for Photoshop, perfect for blending and subtle effects.",
+    "price": 11.99,
+    "category": "photoshop",
+    "tags": [
+      "smudge",
+      "blending"
+    ],
+    "image": "/static/images/brush-pack-014.svg"
+  },
+  {
+    "id": "brush-pack-015",
+    "name": "Affinity Designer Vector Brush Pack",
+    "description": "30 versatile vector brushes for Affinity Designer to create dynamic strokes.",
+    "price": 15.99,
+    "category": "affinity-designer",
+    "tags": [
+      "vector",
+      "brush",
+      "design"
+    ],
+    "image": "/static/images/brush-pack-015.svg"
+  },
+  {
+    "id": "brush-pack-016",
+    "name": "Affinity Designer Texture Brushes",
+    "description": "25 texture brushes for Affinity Designer, adding depth and tactile quality.",
+    "price": 13.99,
+    "category": "affinity-designer",
+    "tags": [
+      "texture",
+      "design",
+      "pattern"
+    ],
+    "image": "/static/images/brush-pack-016.svg"
+  },
+  {
+    "id": "brush-pack-017",
+    "name": "Affinity Designer Calligraphy Brushes",
+    "description": "18 calligraphy brushes for Affinity Designer, perfect for lettering and decorative work.",
+    "price": 12.99,
+    "category": "affinity-designer",
+    "tags": [
+      "calligraphy",
+      "lettering",
+      "ink"
+    ],
+    "image": "/static/images/brush-pack-017.svg"
+  },
+  {
+    "id": "brush-pack-018",
+    "name": "Affinity Designer Halftone Brushes",
+    "description": "20 halftone and dot pattern brushes for Affinity Designer, great for retro effects.",
+    "price": 11.99,
+    "category": "affinity-designer",
+    "tags": [
+      "halftone",
+      "retro",
+      "pattern"
+    ],
+    "image": "/static/images/brush-pack-018.svg"
+  },
+  {
+    "id": "preset-019",
+    "name": "Cinematic Lightroom Presets",
+    "description": "25 cinematic color grading presets for Adobe Lightroom, perfect for film photographers.",
+    "price": 19.99,
+    "category": "lightroom",
+    "tags": [
+      "cinematic",
+      "color grading",
+      "film"
+    ],
+    "image": "/static/images/preset-019.svg"
+  },
+  {
+    "id": "preset-020",
+    "name": "Portrait Lightroom Presets",
+    "description": "30 retouching and skin-tone presets for professional portrait photography in Lightroom.",
+    "price": 17.99,
+    "category": "lightroom",
+    "tags": [
+      "portrait",
+      "retouching",
+      "skin tone"
+    ],
+    "image": "/static/images/preset-020.svg"
+  },
+  {
+    "id": "illustrator-021",
+    "name": "Illustrator Texture Brushes",
+    "description": "20 vector texture brushes for Adobe Illustrator to add organic grit and patterns.",
+    "price": 14.99,
+    "category": "illustrator",
+    "tags": [
+      "texture",
+      "vector",
+      "illustration"
+    ],
+    "image": "/static/images/illustrator-021.svg"
+  },
+  {
+    "id": "illustrator-022",
+    "name": "Illustrator Vintage Patterns",
+    "description": "35 seamless vintage pattern swatches for Illustrator, ideal for retro designs.",
+    "price": 16.99,
+    "category": "illustrator",
+    "tags": [
+      "vintage",
+      "patterns",
+      "retro"
+    ],
+    "image": "/static/images/illustrator-022.svg"
+  },
+  {
+    "id": "figma-023",
+    "name": "Figma Mobile Banking UI Kit",
+    "description": "A comprehensive Figma UI kit for mobile banking apps with 60+ screens and components.",
+    "price": 29.99,
+    "category": "figma",
+    "tags": [
+      "UI kit",
+      "mobile",
+      "banking",
+      "Figma"
+    ],
+    "image": "/static/images/figma-023.svg"
+  },
+  {
+    "id": "figma-024",
+    "name": "Figma Dashboard Design System",
+    "description": "A modular dashboard design system for Figma, including charts, tables, and widgets.",
+    "price": 34.99,
+    "category": "figma",
+    "tags": [
+      "dashboard",
+      "design system",
+      "Figma"
+    ],
+    "image": "/static/images/figma-024.svg"
+  },
+  {
+    "id": "affinity-photo-025",
+    "name": "Affinity Photo Film Presets",
+    "description": "15 film simulation presets for Affinity Photo, emulating classic analog stocks.",
+    "price": 14.99,
+    "category": "affinity-photo",
+    "tags": [
+      "film",
+      "presets",
+      "analog"
+    ],
+    "image": "/static/images/affinity-photo-025.svg"
+  },
+  {
+    "id": "affinity-photo-026",
+    "name": "Affinity Photo Glow Overlays",
+    "description": "25 light leak and glow overlays for Affinity Photo to add warmth and atmosphere.",
+    "price": 12.99,
+    "category": "affinity-photo",
+    "tags": [
+      "overlays",
+      "glow",
+      "light leak"
+    ],
+    "image": "/static/images/affinity-photo-026.svg"
+  },
+  {
+    "id": "csp-027",
+    "name": "Clip Studio Paint Manga Brushes",
+    "description": "Manga-optimized brushes for Clip Studio Paint, including tones, inking, and screentones.",
+    "price": 16.99,
+    "category": "clip-studio",
+    "tags": [
+      "manga",
+      "comic",
+      "inking",
+      "CSP"
+    ],
+    "image": "/static/images/csp-027.svg"
+  },
+  {
+    "id": "csp-028",
+    "name": "Clip Studio Paint 3D Character Base",
+    "description": "A basic 3D character model rigged for Clip Studio Paint, useful for pose references.",
+    "price": 19.99,
+    "category": "clip-studio",
+    "tags": [
+      "3D",
+      "character",
+      "reference",
+      "CSP"
+    ],
+    "image": "/static/images/csp-028.svg"
+  },
+  {
+    "id": "templates-029",
+    "name": "Instagram Post Templates Bundle",
+    "description": "50 customizable Instagram post templates for Canva, perfect for content creators.",
+    "price": 12.99,
+    "category": "templates",
+    "tags": [
+      "Canva",
+      "Instagram",
+      "social media",
+      "templates"
+    ],
+    "image": "/static/images/templates-029.svg"
+  },
+  {
+    "id": "templates-030",
+    "name": "YouTube Thumbnail Pack",
+    "description": "30 eye-catching YouTube thumbnail templates in Canva format, optimized for CTR.",
+    "price": 11.99,
+    "category": "templates",
+    "tags": [
+      "Canva",
+      "YouTube",
+      "thumbnail",
+      "templates"
+    ],
+    "image": "/static/images/templates-030.svg"
+  },
+  {
+    "id": "video-031",
+    "name": "Cinematic LUTs Collection",
+    "description": "Professional color grading LUTs for video. 50+ cinematic looks inspired by Hollywood films. Compatible with DaVinci Resolve, Premiere Pro, Final Cut Pro.",
+    "price": 24.99,
+    "category": "video",
+    "tags": [
+      "video",
+      "color grading",
+      "LUTs",
+      "cinematic",
+      "premiere pro",
+      "davinci resolve"
+    ],
+    "compatible_software": "Premiere Pro, DaVinci Resolve, Final Cut Pro",
+    "file_format": ".cube, .3dl",
+    "image": "video-031.svg",
+    "created_at": "2026-05-09T04:56:14.531192",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "audio-032",
+    "name": "Lo-Fi Hip Hop Sample Pack",
+    "description": "200+ royalty-free lo-fi samples: drums, melodies, vinyl crackles, and chord progressions. Perfect for beats, study music, and chill productions.",
+    "price": 19.99,
+    "category": "audio",
+    "tags": [
+      "audio",
+      "lo-fi",
+      "samples",
+      "hip hop",
+      "beats",
+      "music production"
+    ],
+    "compatible_software": "Ableton Live, FL Studio, Logic Pro, Any DAW",
+    "file_format": ".WAV, .MP3",
+    "image": "audio-032.svg",
+    "created_at": "2026-05-09T04:56:14.531217",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "notion-033",
+    "name": "Ultimate Life Planner Notion Template",
+    "description": "All-in-one Notion workspace for life management: goals, habits, finance tracker, meal planner, journal. 30+ linked databases with automations.",
+    "price": 14.99,
+    "category": "productivity",
+    "tags": [
+      "notion",
+      "planner",
+      "productivity",
+      "life management",
+      "templates"
+    ],
+    "compatible_software": "Notion",
+    "file_format": "Notion Template Link",
+    "image": "notion-033.svg",
+    "created_at": "2026-05-09T04:56:14.531226",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "3d-034",
+    "name": "Low Poly 3D Asset Pack",
+    "description": "100+ low poly 3D models for games and AR: buildings, vehicles, nature, characters. Optimized for mobile and web. Includes textures and animations.",
+    "price": 34.99,
+    "category": "3d",
+    "tags": [
+      "3d",
+      "low poly",
+      "game assets",
+      "AR",
+      "blender",
+      "unity"
+    ],
+    "compatible_software": "Blender, Unity, Unreal Engine, AR platforms",
+    "file_format": ".FBX, .OBJ, .BLEND",
+    "image": "3d-034.svg",
+    "created_at": "2026-05-09T04:56:14.531234",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "ai-035",
+    "name": "AI Prompt Engineering Master Library",
+    "description": "500+ tested prompts for ChatGPT, Midjourney, and Claude. Organized by use case: writing, art, coding, business, research. Includes prompt formulas and tips.",
+    "price": 12.99,
+    "category": "ai",
+    "tags": [
+      "AI",
+      "prompts",
+      "chatgpt",
+      "midjourney",
+      "productivity",
+      "writing"
+    ],
+    "compatible_software": "ChatGPT, Midjourney, Claude, Any AI",
+    "file_format": ".PDF, .Notion, .TXT",
+    "image": "ai-035.svg",
+    "created_at": "2026-05-09T04:56:14.531241",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "cricut-036",
+    "name": "SVG Bundle for Cricut & Silhouette",
+    "description": "500+ cut files for crafting: quotes, shapes, seasonal designs, monograms. Commercial use allowed. Perfect for t-shirts, mugs, stickers, and decals.",
+    "price": 22.99,
+    "category": "crafting",
+    "tags": [
+      "cricut",
+      "silhouette",
+      "svg",
+      "crafting",
+      "cut files",
+      "diy"
+    ],
+    "compatible_software": "Cricut Design Space, Silhouette Studio",
+    "file_format": ".SVG, .DXF, .PNG",
+    "image": "cricut-036.svg",
+    "created_at": "2026-05-09T04:56:14.531250",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "stream-037",
+    "name": "Twitch Streamer Starter Pack",
+    "description": "Complete overlay package for Twitch/YouTube: panels, alerts, emotes, overlays, starting soon screens. Animated and static versions. Customizable in OBS.",
+    "price": 29.99,
+    "category": "streaming",
+    "tags": [
+      "twitch",
+      "streaming",
+      "overlays",
+      "emotes",
+      "obs",
+      "youtube"
+    ],
+    "compatible_software": "OBS, Streamlabs, Twitch, YouTube",
+    "file_format": ".PNG, .GIF, .JSON (Streamlabs)",
+    "image": "stream-037.svg",
+    "created_at": "2026-05-09T04:56:14.531257",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "web-038",
+    "name": "Next.js SaaS Starter Template",
+    "description": "Production-ready Next.js 15 template for SaaS: authentication, payments (Stripe), dashboard, email, SEO. Tailwind CSS, TypeScript. Deploy in minutes.",
+    "price": 79.99,
+    "category": "web-development",
+    "tags": [
+      "nextjs",
+      "react",
+      "saas",
+      "template",
+      "typescript",
+      "tailwind"
+    ],
+    "compatible_software": "Next.js, React, Node.js",
+    "file_format": "GitHub Repository Access",
+    "image": "web-038.svg",
+    "created_at": "2026-05-09T04:56:14.531265",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "fitness-039",
+    "name": "12-Week Home Workout Program PDF",
+    "description": "Complete fitness program: 3 phases, 4 workouts/week, no equipment needed. Includes nutrition guide, progress tracker, video demo links. Beginner to intermediate.",
+    "price": 17.99,
+    "category": "fitness",
+    "tags": [
+      "fitness",
+      "workout",
+      "health",
+      "pdf",
+      "home workout",
+      "exercise"
+    ],
+    "compatible_software": "Any PDF reader",
+    "file_format": ".PDF",
+    "image": "fitness-039.svg",
+    "created_at": "2026-05-09T04:56:14.531275",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "stl-040",
+    "name": "Functional 3D Print Files Bundle",
+    "description": "50+ practical STL files: phone stands, organizers, tools, replacement parts. Tested on Ender 3 and Prusa. Includes print settings and support guides.",
+    "price": 16.99,
+    "category": "3d-printing",
+    "tags": [
+      "3d printing",
+      "stl",
+      "functional",
+      "maker",
+      "ender3",
+      "prusa"
+    ],
+    "compatible_software": "Cura, PrusaSlicer, Any slicer",
+    "file_format": ".STL, .3MF",
+    "image": "stl-040.svg",
+    "created_at": "2026-05-09T04:56:14.531282",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "social-041",
+    "name": "Instagram Reels Template Pack",
+    "description": "30 editable Canva templates for viral Reels: hooks, transitions, text animations. Trending formats for business, coaching, and content creators.",
+    "price": 18.99,
+    "category": "social-media",
+    "tags": [
+      "instagram",
+      "reels",
+      "canva",
+      "social media",
+      "templates",
+      "video"
+    ],
+    "compatible_software": "Canva, Instagram",
+    "file_format": "Canva Template Link",
+    "image": "social-041.svg",
+    "created_at": "2026-05-09T04:56:14.531292",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "course-042",
+    "name": "Online Course Creator Kit",
+    "description": "Everything to launch your course: curriculum templates, slide decks, worksheet generators, certificate templates, email sequences. For Teachable, Thinkific, Kajabi.",
+    "price": 39.99,
+    "category": "education",
+    "tags": [
+      "course",
+      "education",
+      "teachable",
+      "teaching",
+      "templates",
+      "online course"
+    ],
+    "compatible_software": "Teachable, Thinkific, Kajabi, PowerPoint, Google Slides",
+    "file_format": ".PPTX, .PDF, .Google Slides",
+    "image": "course-042.svg",
+    "created_at": "2026-05-09T04:56:14.531300",
+    "stock_status": "in_stock",
+    "download_count": 0
+  }
 ]
