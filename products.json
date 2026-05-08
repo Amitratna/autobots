@@ -229,5 +229,166 @@
             "pattern"
         ],
         "image": "/static/images/brush-pack-018.jpg"
+    },
+    {
+        "id": "preset-019",
+        "name": "Cinematic Lightroom Presets",
+        "description": "25 cinematic color grading presets for Adobe Lightroom, perfect for film photographers.",
+        "price": 19.99,
+        "category": "lightroom",
+        "tags": [
+            "cinematic",
+            "color grading",
+            "film"
+        ],
+        "image": "/static/images/preset-019.jpg"
+    },
+    {
+        "id": "preset-020",
+        "name": "Portrait Lightroom Presets",
+        "description": "30 retouching and skin-tone presets for professional portrait photography in Lightroom.",
+        "price": 17.99,
+        "category": "lightroom",
+        "tags": [
+            "portrait",
+            "retouching",
+            "skin tone"
+        ],
+        "image": "/static/images/preset-020.jpg"
+    },
+    {
+        "id": "illustrator-021",
+        "name": "Illustrator Texture Brushes",
+        "description": "20 vector texture brushes for Adobe Illustrator to add organic grit and patterns.",
+        "price": 14.99,
+        "category": "illustrator",
+        "tags": [
+            "texture",
+            "vector",
+            "illustration"
+        ],
+        "image": "/static/images/illustrator-021.jpg"
+    },
+    {
+        "id": "illustrator-022",
+        "name": "Illustrator Vintage Patterns",
+        "description": "35 seamless vintage pattern swatches for Illustrator, ideal for retro designs.",
+        "price": 16.99,
+        "category": "illustrator",
+        "tags": [
+            "vintage",
+            "patterns",
+            "retro"
+        ],
+        "image": "/static/images/illustrator-022.jpg"
+    },
+    {
+        "id": "figma-023",
+        "name": "Figma Mobile Banking UI Kit",
+        "description": "A comprehensive Figma UI kit for mobile banking apps with 60+ screens and components.",
+        "price": 29.99,
+        "category": "figma",
+        "tags": [
+            "UI kit",
+            "mobile",
+            "banking",
+            "Figma"
+        ],
+        "image": "/static/images/figma-023.jpg"
+    },
+    {
+        "id": "figma-024",
+        "name": "Figma Dashboard Design System",
+        "description": "A modular dashboard design system for Figma, including charts, tables, and widgets.",
+        "price": 34.99,
+        "category": "figma",
+        "tags": [
+            "dashboard",
+            "design system",
+            "Figma"
+        ],
+        "image": "/static/images/figma-024.jpg"
+    },
+    {
+        "id": "affinity-photo-025",
+        "name": "Affinity Photo Film Presets",
+        "description": "15 film simulation presets for Affinity Photo, emulating classic analog stocks.",
+        "price": 14.99,
+        "category": "affinity-photo",
+        "tags": [
+            "film",
+            "presets",
+            "analog"
+        ],
+        "image": "/static/images/affinity-photo-025.jpg"
+    },
+    {
+        "id": "affinity-photo-026",
+        "name": "Affinity Photo Glow Overlays",
+        "description": "25 light leak and glow overlays for Affinity Photo to add warmth and atmosphere.",
+        "price": 12.99,
+        "category": "affinity-photo",
+        "tags": [
+            "overlays",
+            "glow",
+            "light leak"
+        ],
+        "image": "/static/images/affinity-photo-026.jpg"
+    },
+    {
+        "id": "csp-027",
+        "name": "Clip Studio Paint Manga Brushes",
+        "description": "Manga-optimized brushes for Clip Studio Paint, including tones, inking, and screentones.",
+        "price": 16.99,
+        "category": "clip-studio",
+        "tags": [
+            "manga",
+            "comic",
+            "inking",
+            "CSP"
+        ],
+        "image": "/static/images/csp-027.jpg"
+    },
+    {
+        "id": "csp-028",
+        "name": "Clip Studio Paint 3D Character Base",
+        "description": "A basic 3D character model rigged for Clip Studio Paint, useful for pose references.",
+        "price": 19.99,
+        "category": "clip-studio",
+        "tags": [
+            "3D",
+            "character",
+            "reference",
+            "CSP"
+        ],
+        "image": "/static/images/csp-028.jpg"
+    },
+    {
+        "id": "templates-029",
+        "name": "Instagram Post Templates Bundle",
+        "description": "50 customizable Instagram post templates for Canva, perfect for content creators.",
+        "price": 12.99,
+        "category": "templates",
+        "tags": [
+            "Canva",
+            "Instagram",
+            "social media",
+            "templates"
+        ],
+        "image": "/static/images/templates-029.jpg"
+    },
+    {
+        "id": "templates-030",
+        "name": "YouTube Thumbnail Pack",
+        "description": "30 eye-catching YouTube thumbnail templates in Canva format, optimized for CTR.",
+        "price": 11.99,
+        "category": "templates",
+        "tags": [
+            "Canva",
+            "YouTube",
+            "thumbnail",
+            "templates"
+        ],
+        "image": "/static/images/templates-030.jpg"
     }
 ]
