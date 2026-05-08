@@ -5,7 +5,11 @@
         "description": "A set of 20 high-quality watercolor brushes for Procreate, perfect for digital artists.",
         "price": 12.99,
         "category": "procreate",
-        "tags": ["watercolor", "painting", "illustration"],
+        "tags": [
+            "watercolor",
+            "painting",
+            "illustration"
+        ],
         "image": "/static/images/brush-pack-001.jpg"
     },
     {
@@ -14,7 +18,11 @@
         "description": "15 authentic ink brushes for Adobe Photoshop, great for comic artists and illustrators.",
         "price": 9.99,
         "category": "photoshop",
-        "tags": ["ink", "comic", "line art"],
+        "tags": [
+            "ink",
+            "comic",
+            "line art"
+        ],
         "image": "/static/images/brush-pack-002.jpg"
     },
     {
@@ -23,17 +31,24 @@
         "description": "30 procedural texture brushes for Affinity Designer, perfect for adding depth to your designs.",
         "price": 14.99,
         "category": "affinity-designer",
-        "tags": ["texture", "design", "procedural"],
+        "tags": [
+            "texture",
+            "design",
+            "procedural"
+        ],
         "image": "/static/images/brush-pack-003.jpg"
-    }
-    ,
+    },
     {
         "id": "brush-pack-004",
         "name": "Procreate Charcoal Brushes",
         "description": "A set of 15 textured charcoal brushes for Procreate, ideal for sketching and adding grit.",
         "price": 10.99,
         "category": "procreate",
-        "tags": ["charcoal", "sketching", "texture"],
+        "tags": [
+            "charcoal",
+            "sketching",
+            "texture"
+        ],
         "image": "/static/images/brush-pack-004.jpg"
     },
     {
@@ -42,7 +57,11 @@
         "description": "20 watercolor brushes for Photoshop, perfect for painterly effects.",
         "price": 11.99,
         "category": "photoshop",
-        "tags": ["watercolor", "painting", "effects"],
+        "tags": [
+            "watercolor",
+            "painting",
+            "effects"
+        ],
         "image": "/static/images/brush-pack-005.jpg"
     },
     {
@@ -51,7 +70,164 @@
         "description": "25 halftone and pattern brushes for Affinity Designer, great for retro graphics.",
         "price": 13.99,
         "category": "affinity-designer",
-        "tags": ["halftone", "retro", "patterns"],
+        "tags": [
+            "halftone",
+            "retro",
+            "patterns"
+        ],
         "image": "/static/images/brush-pack-006.jpg"
+    },
+    {
+        "id": "brush-pack-007",
+        "name": "Procreate Gouache Brushes",
+        "description": "A set of 15 high-quality gouache brushes for Procreate, perfect for painterly effects.",
+        "price": 13.99,
+        "category": "procreate",
+        "tags": [
+            "gouache",
+            "painting",
+            "art"
+        ],
+        "image": "/static/images/brush-pack-007.jpg"
+    },
+    {
+        "id": "brush-pack-008",
+        "name": "Procreate Marker Pens",
+        "description": "20 authentic marker pens for Procreate, ideal for lettering and comic illustration.",
+        "price": 11.99,
+        "category": "procreate",
+        "tags": [
+            "marker",
+            "lettering",
+            "illustration"
+        ],
+        "image": "/static/images/brush-pack-008.jpg"
+    },
+    {
+        "id": "brush-pack-009",
+        "name": "Procreate Pencil Sketch Pack",
+        "description": "25 textured pencil brushes for Procreate, great for sketching and drawing.",
+        "price": 12.99,
+        "category": "procreate",
+        "tags": [
+            "pencil",
+            "sketch",
+            "drawing"
+        ],
+        "image": "/static/images/brush-pack-009.jpg"
+    },
+    {
+        "id": "brush-pack-010",
+        "name": "Procreate Wet Media Brushes",
+        "description": "18 brushes simulating wet media like watercolor and ink for Procreate.",
+        "price": 14.99,
+        "category": "procreate",
+        "tags": [
+            "wet media",
+            "watercolor",
+            "ink"
+        ],
+        "image": "/static/images/brush-pack-010.jpg"
+    },
+    {
+        "id": "brush-pack-011",
+        "name": "Procreate Texture Stamps",
+        "description": "30 stamp textures for Procreate, perfect for adding patterns and gritty effects.",
+        "price": 9.99,
+        "category": "procreate",
+        "tags": [
+            "texture",
+            "stamp",
+            "pattern"
+        ],
+        "image": "/static/images/brush-pack-011.jpg"
+    },
+    {
+        "id": "brush-pack-012",
+        "name": "Photoshop Gouache Brushes",
+        "description": "12 gouache brushes for Photoshop, offering a natural paint-like feel.",
+        "price": 12.99,
+        "category": "photoshop",
+        "tags": [
+            "gouache",
+            "painting"
+        ],
+        "image": "/static/images/brush-pack-012.jpg"
+    },
+    {
+        "id": "brush-pack-013",
+        "name": "Photoshop Marker Set",
+        "description": "22 marker brushes for Photoshop, excellent for inking and bold strokes.",
+        "price": 10.99,
+        "category": "photoshop",
+        "tags": [
+            "marker",
+            "inking"
+        ],
+        "image": "/static/images/brush-pack-013.jpg"
+    },
+    {
+        "id": "brush-pack-014",
+        "name": "Photoshop Smudge Tools",
+        "description": "15 smudge brushes for Photoshop, perfect for blending and subtle effects.",
+        "price": 11.99,
+        "category": "photoshop",
+        "tags": [
+            "smudge",
+            "blending"
+        ],
+        "image": "/static/images/brush-pack-014.jpg"
+    },
+    {
+        "id": "brush-pack-015",
+        "name": "Affinity Designer Vector Brush Pack",
+        "description": "30 versatile vector brushes for Affinity Designer to create dynamic strokes.",
+        "price": 15.99,
+        "category": "affinity-designer",
+        "tags": [
+            "vector",
+            "brush",
+            "design"
+        ],
+        "image": "/static/images/brush-pack-015.jpg"
+    },
+    {
+        "id": "brush-pack-016",
+        "name": "Affinity Designer Texture Brushes",
+        "description": "25 texture brushes for Affinity Designer, adding depth and tactile quality.",
+        "price": 13.99,
+        "category": "affinity-designer",
+        "tags": [
+            "texture",
+            "design",
+            "pattern"
+        ],
+        "image": "/static/images/brush-pack-016.jpg"
+    },
+    {
+        "id": "brush-pack-017",
+        "name": "Affinity Designer Calligraphy Brushes",
+        "description": "18 calligraphy brushes for Affinity Designer, perfect for lettering and decorative work.",
+        "price": 12.99,
+        "category": "affinity-designer",
+        "tags": [
+            "calligraphy",
+            "lettering",
+            "ink"
+        ],
+        "image": "/static/images/brush-pack-017.jpg"
+    },
+    {
+        "id": "brush-pack-018",
+        "name": "Affinity Designer Halftone Brushes",
+        "description": "20 halftone and dot pattern brushes for Affinity Designer, great for retro effects.",
+        "price": 11.99,
+        "category": "affinity-designer",
+        "tags": [
+            "halftone",
+            "retro",
+            "pattern"
+        ],
+        "image": "/static/images/brush-pack-018.jpg"
     }
 ]
