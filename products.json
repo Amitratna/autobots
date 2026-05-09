@@ -641,5 +641,257 @@
     "created_at": "2026-05-09T04:56:14.531300",
     "stock_status": "in_stock",
     "download_count": 0
+  },
+  {
+    "id": "nft-043",
+    "name": "NFT Creator Kit - Smart Contract Templates",
+    "description": "Launch your NFT collection: Solidity smart contracts (ERC-721/1155), metadata templates, rarity tools, minting website code. Includes OpenSea deployment guide.",
+    "price": 49.99,
+    "category": "web3",
+    "tags": [
+      "nft",
+      "blockchain",
+      "crypto",
+      "solidity",
+      "ethereum",
+      "web3"
+    ],
+    "compatible_software": "Ethereum, OpenSea, Remix IDE, Hardhat",
+    "file_format": ".SOL, .JS, .HTML",
+    "image": "nft-043.svg",
+    "created_at": "2026-05-09T06:36:56.775474",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "lang-044",
+    "name": "Spanish Learning Anki Deck - 5000 Cards",
+    "description": "Complete Spanish vocabulary: 5000 spaced repetition cards with audio, images, example sentences. CEFR A1-C2 organized. For Anki mobile/desktop.",
+    "price": 15.99,
+    "category": "language-learning",
+    "tags": [
+      "spanish",
+      "anki",
+      "language",
+      "flashcards",
+      "learning",
+      "vocabulary"
+    ],
+    "compatible_software": "Anki, AnkiDroid, AnkiMobile",
+    "file_format": ".APKG",
+    "image": "lang-044.svg",
+    "created_at": "2026-05-09T06:36:56.775537",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "pet-045",
+    "name": "Pet Care Tracker & Health Journal",
+    "description": "Digital pet health organizer: vaccination records, vet visits, medication schedules, weight tracking, grooming logs. For multi-pet households. Printable + digital.",
+    "price": 11.99,
+    "category": "pet-care",
+    "tags": [
+      "pets",
+      "health",
+      "tracker",
+      "journal",
+      "dogs",
+      "cats"
+    ],
+    "compatible_software": "GoodNotes, Notability, PDF readers, Printable",
+    "file_format": ".PDF, .GoodNotes",
+    "image": "pet-045.svg",
+    "created_at": "2026-05-09T06:36:56.775559",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "finance-046",
+    "name": "Personal Finance Dashboard - Google Sheets",
+    "description": "Automated finance tracker: income/expense logging, budget alerts, net worth calculator, investment tracker, bill reminders. Auto-categorization with formulas.",
+    "price": 13.99,
+    "category": "finance",
+    "tags": [
+      "finance",
+      "budget",
+      "money",
+      "google sheets",
+      "tracking",
+      "investment"
+    ],
+    "compatible_software": "Google Sheets, Excel",
+    "file_format": "Google Sheets Template",
+    "image": "finance-046.svg",
+    "created_at": "2026-05-09T06:36:56.775579",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "mental-047",
+    "name": "Mental Health & Mindfulness Journal",
+    "description": "90-day guided journal: mood tracking, gratitude prompts, CBT exercises, meditation logs, sleep tracker, therapy notes. Evidence-based wellness.",
+    "price": 12.99,
+    "category": "mental-health",
+    "tags": [
+      "mental health",
+      "journal",
+      "mindfulness",
+      "cbt",
+      "wellness",
+      "self-care"
+    ],
+    "compatible_software": "GoodNotes, Notability, PDF readers, Printable",
+    "file_format": ".PDF, .GoodNotes",
+    "image": "mental-047.svg",
+    "created_at": "2026-05-09T06:36:56.775598",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "realestate-048",
+    "name": "Real Estate Investment Analyzer",
+    "description": "Property analysis spreadsheet: cash flow calculator, cap rate, ROI, mortgage comparison, rehab estimator, rental yield. For house hackers and investors.",
+    "price": 24.99,
+    "category": "real-estate",
+    "tags": [
+      "real estate",
+      "investment",
+      "finance",
+      "property",
+      "rental",
+      "analysis"
+    ],
+    "compatible_software": "Excel, Google Sheets",
+    "file_format": ".XLSX, .Google Sheets",
+    "image": "realestate-048.svg",
+    "created_at": "2026-05-09T06:36:56.775619",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "event-049",
+    "name": "Wedding Planning Ultimate Checklist",
+    "description": "12-month wedding planner: budget tracker, guest list manager, vendor contacts, timeline, seating chart, day-of schedule. Stress-free planning system.",
+    "price": 16.99,
+    "category": "event-planning",
+    "tags": [
+      "wedding",
+      "planning",
+      "checklist",
+      "event",
+      "budget",
+      "organization"
+    ],
+    "compatible_software": "Notion, Google Sheets, PDF",
+    "file_format": ".Notion, .PDF, .Google Sheets",
+    "image": "event-049.svg",
+    "created_at": "2026-05-09T06:36:56.775644",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "parent-050",
+    "name": "Parenting Command Center - Baby to Toddler",
+    "description": "Digital parenting hub: feeding logs, sleep schedules, milestone tracker, doctor visits, vaccination records, photo memories. For twins/multiples support.",
+    "price": 14.99,
+    "category": "parenting",
+    "tags": [
+      "parenting",
+      "baby",
+      "toddler",
+      "tracker",
+      "milestones",
+      "family"
+    ],
+    "compatible_software": "Notion, GoodNotes, Google Sheets",
+    "file_format": ".Notion, .PDF, .Google Sheets",
+    "image": "parent-050.svg",
+    "created_at": "2026-05-09T06:36:56.775664",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "garden-051",
+    "name": "Vegetable Garden Planner & Tracker",
+    "description": "Plan your perfect garden: planting calendar by zone, crop rotation planner, seed inventory, harvest tracker, garden layout templates. Organic gardening focused.",
+    "price": 13.99,
+    "category": "gardening",
+    "tags": [
+      "gardening",
+      "vegetables",
+      "planner",
+      "organic",
+      "homestead",
+      "plants"
+    ],
+    "compatible_software": "PDF, GoodNotes, Printable",
+    "file_format": ".PDF",
+    "image": "garden-051.svg",
+    "created_at": "2026-05-09T06:36:56.775685",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "auto-052",
+    "name": "Car Maintenance Log & Repair Tracker",
+    "description": "Vehicle maintenance organizer: service records, fuel logs, repair history, expense tracker, reminder alerts. For multiple vehicles. Resale value booster.",
+    "price": 10.99,
+    "category": "automotive",
+    "tags": [
+      "car",
+      "maintenance",
+      "automotive",
+      "tracker",
+      "repair",
+      "vehicle"
+    ],
+    "compatible_software": "PDF, GoodNotes, Google Sheets",
+    "file_format": ".PDF, .Google Sheets",
+    "image": "auto-052.svg",
+    "created_at": "2026-05-09T06:36:56.775705",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "home-053",
+    "name": "Home Renovation Project Planner",
+    "description": "Complete renovation manager: budget templates, contractor comparison, timeline Gantt charts, material lists, before/after photos, warranty tracker.",
+    "price": 18.99,
+    "category": "home-improvement",
+    "tags": [
+      "renovation",
+      "home",
+      "diy",
+      "construction",
+      "budget",
+      "planning"
+    ],
+    "compatible_software": "Notion, Google Sheets, PDF",
+    "file_format": ".Notion, .PDF, .Google Sheets",
+    "image": "home-053.svg",
+    "created_at": "2026-05-09T06:36:56.775723",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "legal-054",
+    "name": "Legal Document Templates for Freelancers",
+    "description": "Protect your business: client contracts, NDAs, invoices, terms of service, privacy policy, cease & desist. Lawyer-reviewed templates. US/UK/EU versions.",
+    "price": 34.99,
+    "category": "legal",
+    "tags": [
+      "legal",
+      "contracts",
+      "freelance",
+      "business",
+      "templates",
+      "law"
+    ],
+    "compatible_software": "Word, Google Docs, PDF",
+    "file_format": ".DOCX, .Google Docs, .PDF",
+    "image": "legal-054.svg",
+    "created_at": "2026-05-09T06:36:56.775744",
+    "stock_status": "in_stock",
+    "download_count": 0
   }
 ]
