@@ -893,5 +893,257 @@
     "created_at": "2026-05-09T06:36:56.775744",
     "stock_status": "in_stock",
     "download_count": 0
+  },
+  {
+    "id": "podcast-055",
+    "name": "Podcast Launch Kit - Complete Bundle",
+    "description": "Start your podcast: intro/outro music (10 tracks), ID3 tags, cover art templates (PSD), show notes templates, guest release forms, distribution checklist. Everything for Spotify/Apple.",
+    "price": 32.99,
+    "category": "podcasting",
+    "tags": [
+      "podcast",
+      "audio",
+      "music",
+      "cover art",
+      "spotify",
+      "apple podcasts"
+    ],
+    "compatible_software": "Audacity, GarageBand, Photoshop, Canva",
+    "file_format": ".MP3, .PSD, .PDF, .Canva",
+    "image": "podcast-055.svg",
+    "created_at": "2026-05-09T06:58:45.219022",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "genealogy-056",
+    "name": "Family Tree Research Organizer",
+    "description": "Trace your ancestry: pedigree charts (12 generations), research logs, citation templates, DNA tracker, interview questionnaires, photo organization system. For Ancestry/MyHeritage users.",
+    "price": 14.99,
+    "category": "genealogy",
+    "tags": [
+      "genealogy",
+      "family tree",
+      "ancestry",
+      "research",
+      "history",
+      "dna"
+    ],
+    "compatible_software": "PDF, GoodNotes, Excel",
+    "file_format": ".PDF, .XLSX",
+    "image": "genealogy-056.svg",
+    "created_at": "2026-05-09T06:58:45.219051",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "survival-057",
+    "name": "Emergency Preparedness & Survival Guide",
+    "description": "72-hour bug-out bag checklist, water purification methods, first aid protocols, food storage calculator, emergency contacts sheet, evacuation plan templates. Wilderness & urban survival.",
+    "price": 16.99,
+    "category": "survival",
+    "tags": [
+      "survival",
+      "prepping",
+      "emergency",
+      "bugout",
+      "first aid",
+      "outdoor"
+    ],
+    "compatible_software": "PDF, Printable",
+    "file_format": ".PDF",
+    "image": "survival-057.svg",
+    "created_at": "2026-05-09T06:58:45.219060",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "magic-058",
+    "name": "Magic Tricks Masterclass - 50 Easy Tricks",
+    "description": "Amaze friends: 50 beginner-friendly magic tricks with step-by-step instructions, video QR codes, patter scripts, performance tips. Cards, coins, everyday objects. No special props needed.",
+    "price": 19.99,
+    "category": "magic-entertainment",
+    "tags": [
+      "magic",
+      "tricks",
+      "entertainment",
+      "illusions",
+      "cards",
+      "party"
+    ],
+    "compatible_software": "PDF, Video (QR codes)",
+    "file_format": ".PDF + Video Links",
+    "image": "magic-058.svg",
+    "created_at": "2026-05-09T06:58:45.219068",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "astrology-059",
+    "name": "Astrology Birth Chart Interpreter",
+    "description": "Read natal charts: planet meanings, house interpretations, aspect guides, transit tracker, synastry compatibility sheets. For beginners to intermediate. Includes 100+ page workbook.",
+    "price": 15.99,
+    "category": "astrology-spirituality",
+    "tags": [
+      "astrology",
+      "birth chart",
+      "zodiac",
+      "horoscope",
+      "spiritual",
+      "natal"
+    ],
+    "compatible_software": "PDF, GoodNotes",
+    "file_format": ".PDF",
+    "image": "astrology-059.svg",
+    "created_at": "2026-05-09T06:58:45.219079",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "beekeeping-060",
+    "name": "Beginner Beekeeping Starter Guide",
+    "description": "Start your apiary: hive setup diagrams, seasonal care calendar, honey harvesting guide, bee health checklist, equipment list, local regulation finder. Sustainable beekeeping focus.",
+    "price": 17.99,
+    "category": "beekeeping",
+    "tags": [
+      "beekeeping",
+      "apiary",
+      "honey",
+      "sustainable",
+      "farming",
+      "nature"
+    ],
+    "compatible_software": "PDF, Printable",
+    "file_format": ".PDF",
+    "image": "beekeeping-060.svg",
+    "created_at": "2026-05-09T06:58:45.219088",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "homestead-061",
+    "name": "Homesteading Self-Sufficiency Planner",
+    "description": "Live off-grid: crop planning by season, livestock care schedules, food preservation guides (canning, fermenting), water collection systems, energy planning. 200+ pages.",
+    "price": 21.99,
+    "category": "homesteading",
+    "tags": [
+      "homesteading",
+      "self-sufficient",
+      "off-grid",
+      "farming",
+      "sustainable",
+      "preservation"
+    ],
+    "compatible_software": "PDF, GoodNotes, Printable",
+    "file_format": ".PDF",
+    "image": "homestead-061.svg",
+    "created_at": "2026-05-09T06:58:45.219096",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "lockpick-062",
+    "name": "Lockpicking Basics - Beginner Course",
+    "description": "Learn locksport: tool selection guide, lock anatomy diagrams, 20+ picking techniques, practice lock recommendations, legal disclaimers by region. Includes video tutorials.",
+    "price": 22.99,
+    "category": "lockpicking",
+    "tags": [
+      "lockpicking",
+      "locksport",
+      "security",
+      "skills",
+      "hobby",
+      "educational"
+    ],
+    "compatible_software": "PDF, Video",
+    "file_format": ".PDF + Video Links",
+    "image": "lockpick-062.svg",
+    "created_at": "2026-05-09T06:58:45.219103",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "metal-063",
+    "name": "Metal Detecting Treasure Hunter's Kit",
+    "description": "Find hidden treasures: detector settings guide, location research methods, log sheets, finds photography tips, cleaning/restoration guides, legal permissions templates. For beach, park, historical sites.",
+    "price": 18.99,
+    "category": "metal-detecting",
+    "tags": [
+      "metal detecting",
+      "treasure hunting",
+      "hobby",
+      "outdoor",
+      "history",
+      "coins"
+    ],
+    "compatible_software": "PDF, GoodNotes",
+    "file_format": ".PDF",
+    "image": "metal-063.svg",
+    "created_at": "2026-05-09T06:58:45.219111",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "calligraphy-064",
+    "name": "Modern Calligraphy Practice Sheets",
+    "description": "Beautiful handwriting: 100+ practice sheets (uppercase, lowercase, numbers, flourishes), stroke order guides, spacing templates, project ideas (envelopes, quotes, certificates). For brush & pointed pen.",
+    "price": 13.99,
+    "category": "calligraphy",
+    "tags": [
+      "calligraphy",
+      "handwriting",
+      "lettering",
+      "art",
+      "practice",
+      "brush pen"
+    ],
+    "compatible_software": "PDF, Printable, Procreate",
+    "file_format": ".PDF, .Procreate",
+    "image": "calligraphy-064.svg",
+    "created_at": "2026-05-09T06:58:45.219118",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "voice-065",
+    "name": "Voice Acting Starter Kit",
+    "description": "Launch voice career: home studio setup guide, mic comparison charts, demo reel scripts (commercial, narration, animation), audition tips, rate cards, contract templates. For beginners.",
+    "price": 26.99,
+    "category": "voice-acting",
+    "tags": [
+      "voice acting",
+      "voiceover",
+      "recording",
+      "career",
+      "audio",
+      "narration"
+    ],
+    "compatible_software": "Audacity, Adobe Audition, DAW",
+    "file_format": ".PDF, .WAV (scripts)",
+    "image": "voice-065.svg",
+    "created_at": "2026-05-09T06:58:45.219125",
+    "stock_status": "in_stock",
+    "download_count": 0
+  },
+  {
+    "id": "resume-066",
+    "name": "Professional Resume & Cover Letter Kit",
+    "description": "Land your dream job: 15 ATS-friendly resume templates (Word/Google Docs), matching cover letters, thank-you notes, LinkedIn optimization guide, interview question bank. For all industries.",
+    "price": 16.99,
+    "category": "career",
+    "tags": [
+      "resume",
+      "cv",
+      "cover letter",
+      "job search",
+      "career",
+      "interview"
+    ],
+    "compatible_software": "Microsoft Word, Google Docs, Canva",
+    "file_format": ".DOCX, .Google Docs, .Canva",
+    "image": "resume-066.svg",
+    "created_at": "2026-05-09T06:58:45.219133",
+    "stock_status": "in_stock",
+    "download_count": 0
   }
 ]
